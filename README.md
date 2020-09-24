@@ -13,7 +13,7 @@
 ### Loon脚本订阅配置：
 * [视频教程](https://youtu.be/F1BEgma4xYA)
 
-* [Script.conf](https://github.com/Tartarus2014/Loon-Script/blob/master/Scripte.conf) 脚本订阅
+* [Script.conf](https://github.com/Tartarus2014/Loon-Script/blob/master/Script.conf) 脚本订阅
 
 * [Cookie.conf](https://github.com/Tartarus2014/Loon-Script/blob/master/Cookie.conf)获取Cookie订阅
 
