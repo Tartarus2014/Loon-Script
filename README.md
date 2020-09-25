@@ -13,11 +13,11 @@
 ### Loon脚本订阅配置：
 * [视频教程](https://youtu.be/F1BEgma4xYA)
 
-* [Script.conf](https://github.com/Tartarus2014/Loon-Script/blob/master/Script.conf) 脚本订阅
+* [Script.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf) 脚本订阅
 
-* [Cookie.conf](https://github.com/Tartarus2014/Loon-Script/blob/master/Cookie.conf)获取Cookie订阅
+* [Cookie.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Cookie.conf)获取Cookie订阅
 
-* [Task.conf](https://github.com/Tartarus2014/Loon-Script/blob/master/Task.conf) 定时任务订阅
+* [Task.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf) 定时任务订阅
 
 
 ## 免责声明：
