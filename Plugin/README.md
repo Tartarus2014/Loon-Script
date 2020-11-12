@@ -20,6 +20,6 @@
 
 Host: https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Host.plugin
 
-Adv： https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Block/Advertising.plugi
+Adv： https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Block/Advertising.plugin
 
 General： https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/General.plugin
