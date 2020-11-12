@@ -26,6 +26,9 @@
 
 * [Advertising.plugin](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Block/Advertising.plugin) 去广告插件
 
+* [Host.plugin](https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Host.plugin) Host
+
+* [General.plugin](https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/General.plugin) General
 
 ## 免责声明 ：
 
