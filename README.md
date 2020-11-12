@@ -14,7 +14,7 @@
 
 
 ### Loon脚本订阅配置 ：
-* [视频教程](https://youtu.be/F1BEgma4xYA)
+* [文字教程](https://github.com/chiupam/tutorial/blob/master/Loon/Plus/README.md)
 
 * [Script.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf) 脚本订阅
 
