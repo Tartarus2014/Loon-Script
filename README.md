@@ -22,6 +22,10 @@
 
 * [Task.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf) 定时任务订阅
 
+### Loon插件订阅配置 ：
+
+* [Advertising.plugi](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Block/Advertising.plugi) 去广告插件
+
 
 ## 免责声明 ：
 
