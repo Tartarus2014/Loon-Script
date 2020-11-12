@@ -1,0 +1,11 @@
+# 作者GitHub：https://github.com/Choler
+
+[Rule]
+URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
+
+[Script]
+http-response ^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/rrsp.js, requires-body=true, timeout=10, tag=rrsp_video
+http-response ^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$ script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/rrsp.js, requires-body=true, timeout=10, tag=rrsp_banner
+
+[MITM]
+hostname = api.rr.tv
