@@ -24,7 +24,7 @@
 
 ### Loon插件订阅配置 ：
 
-* [Advertising.plugin](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Block/Advertising.plugin) 去广告插件
+* [Advertising.plugin](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.plugin) 去广告插件
 
 * [Host.plugin](https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Host.plugin) Host
 
