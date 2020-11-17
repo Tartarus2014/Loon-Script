@@ -1,8 +1,0 @@
-# Block iOS Software Update
-# 屏蔽 iOS 系统更新
-
-[Rule]
-DOMAIN,mesu.apple.com,REJECT
-DOMAIN,gdmf.apple.com,REJECT
-DOMAIN,updates-http.cdn-apple.com,REJECT
-DOMAIN,xp.apple.com,REJECT
