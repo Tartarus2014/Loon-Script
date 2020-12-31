@@ -1,26 +1,27 @@
- # ZhiHu Ads
+# ZhiHu Ads
 # 知乎去广告及功能增强
 # Github链接：https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
 
 [Rule]
 # 知乎去广告
-DOMAIN,118.89.204.198,REJECT,no-resolve
-DOMAIN-SUFFIX,118.89.204.198,REJECT,no-resolve
-DOMAIN-KEYWORD,118.89.204.198,REJECT,no-resolve
-IP-CIDR,118.89.204.198/32,REJECT,no-resolve
-DOMAIN,appcloud2.zhihu.com,REJECT
+DOMAIN,118.89.204.198,REJECT
+DOMAIN-KEYWORD,118.89.204.198,REJECT
+IP-CIDR,118.89.204.198/32,no-resolve,REJECT
 DOMAIN,appcloud2.in.zhihu.com,REJECT
 USER-AGENT,AVOS*,REJECT
-URL-REGEX,^https?:\/\/api\.zhihu\.com\/(notifications\/v3\/count|v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad|appview\/api\/v\d\/answers\/\d+\/recommendations),REJECT
+# 拦截知乎回答下的广告
+URL-REGEX,^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations,REJECT
+# 知乎拦截其他广告
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/(notifications\/v3\/count|v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad),REJECT
 
 [URL Rewrite]
 # 知乎拦截其他广告
-^https?:\/\/api\.zhihu\.com\/(notifications\/v3\/count|v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad|appview\/api\/v\d\/answers\/\d+\/recommendations) url reject-200
+^https?:\/\/api\.zhihu\.com\/(notifications\/v3\/count|v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad) - reject-200
 # 知乎网页版去广告
-^https?:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject-200
-^https?:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation url reject-200
-^https?:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner url reject-200
-^https?:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation url reject-200
+^https?:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings - reject-200
+^https?:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation - reject-200
+^https?:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner - reject-200
+^https?:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation - reject-200
 
 [Script]
 http-response ^https?:\/\/api\.zhihu\.com\/people requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_处理用户信息
