@@ -1,0 +1,9 @@
+[MITM]
+hostname=raw.githubusercontent.com, gist.githubusercontent.com
+
+[Url Rewrite]
+# github域名重定向
+https:\/\/raw.githubusercontent.com https://raw.sevencdn.com 302
+
+[Rule]
+DOMAIN,github.pengym.workers.dev,DIRECT
