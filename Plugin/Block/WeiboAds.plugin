@@ -1,3 +1,24 @@
+[Rule]
+DOMAIN-suffix, wbpctips.mobile.sina.cn, REJECT
+DOMAIN-suffix, wbclick.mobile.sina.cn, REJECT
+DOMAIN-suffix, wbapp.mobile.sina.cn, REJECT
+DOMAIN-suffix, wb.gtimg.com, REJECT
+DOMAIN-suffix, wapwbclick.mobile.sina.cn, REJECT
+DOMAIN-suffix, weibocdn.com, DIRECT
+DOMAIN-suffix, weibo.com, DIRECT
+DOMAIN-suffix, zymo.mps.weibo.com, REJECT
+DOMAIN-suffix, weibomingzi.com, REJECT
+DOMAIN-suffix, sdkapp.uve.weibo.com, REJECT
+DOMAIN-suffix, s.alitui.weibo.com, REJECT
+DOMAIN-suffix, promote.biz.weibo.cn, REJECT
+DOMAIN-suffix, gw6.push.mcp.weibo.cn, REJECT
+DOMAIN-suffix, gw5.push.mcp.weibo.cn, REJECT
+DOMAIN-suffix, game.weibo.com, REJECT
+DOMAIN-suffix, game.weibo.cn, REJECT
+DOMAIN-suffix, biz.weibo.com, REJECT
+DOMAIN-suffix, alitui.weibo.com, REJECT
+DOMAIN-suffix, adimg.uve.weibo.com, REJECT
+
 [Script]
 # Weibo
 http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
