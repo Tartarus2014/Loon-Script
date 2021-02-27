@@ -1,13 +1,32 @@
 # 一些插件合集 包括：哔哩哔哩 微博 奈飞评分 京东淘宝比价
 
 [Rule]
-# 去广告
+# Bilibili
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
-# 可能的一些推广(beta)
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
-# BiliBili漫画去广告
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
+
+# WeiBo
+DOMAIN-suffix, wbpctips.mobile.sina.cn, REJECT
+DOMAIN-suffix, wbclick.mobile.sina.cn, REJECT
+DOMAIN-suffix, wbapp.mobile.sina.cn, REJECT
+DOMAIN-suffix, wb.gtimg.com, REJECT
+DOMAIN-suffix, wapwbclick.mobile.sina.cn, REJECT
+DOMAIN-suffix, weibocdn.com, DIRECT
+DOMAIN-suffix, weibo.com, DIRECT
+DOMAIN-suffix, zymo.mps.weibo.com, REJECT
+DOMAIN-suffix, weibomingzi.com, REJECT
+DOMAIN-suffix, sdkapp.uve.weibo.com, REJECT
+DOMAIN-suffix, s.alitui.weibo.com, REJECT
+DOMAIN-suffix, promote.biz.weibo.cn, REJECT
+DOMAIN-suffix, gw6.push.mcp.weibo.cn, REJECT
+DOMAIN-suffix, gw5.push.mcp.weibo.cn, REJECT
+DOMAIN-suffix, game.weibo.com, REJECT
+DOMAIN-suffix, game.weibo.cn, REJECT
+DOMAIN-suffix, biz.weibo.com, REJECT
+DOMAIN-suffix, alitui.weibo.com, REJECT
+DOMAIN-suffix, adimg.uve.weibo.com, REJECT
 
 [URL Rewrite]
 # 去除搜索中的大家都在搜
