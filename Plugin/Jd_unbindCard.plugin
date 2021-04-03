@@ -1,0 +1,5 @@
+[URL Rewrite]
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
+
+[MITM]
+hostname = shopmember.m.jd.com and
