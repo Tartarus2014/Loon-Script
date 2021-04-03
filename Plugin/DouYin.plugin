@@ -12,9 +12,9 @@ DOMAIN-SUFFIX, ipstatp.com, REJECT
 ^https?:\/\/(.*)\.amemv\.com\/aweme\/v2\/(follow\/)?feed\/ https://$1.amemv.com/aweme/v1/$2feed/ header
 
 [Script]
-http-request ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ script-path =https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
+http-request ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js, timeout=10, tag=Aweme.js
 
-http-response ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
+http-response ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js, requires-body=true, timeout=10, tag=Aweme.js
 
 [MITM]
 hostname = *.amemv.com
