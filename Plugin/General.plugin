@@ -1,6 +1,4 @@
 [URL Rewrite]
-#Google 搜索及地图、微博短链接白名单、AbeamTV 区域限制的解锁几一些体验增强
-
 # Redirect Google Search Service
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
@@ -14,9 +12,6 @@
 ^(http|https):\/\/you\.163\.com\/ https://you.163.com/ 302
 ^(http|https):\/\/(www.)?suning\.com\/ https://suning.com/ 302
 ^(http|https):\/\/(www.)?yhd\.com\/ https://yhd.com/ 302
-
-# Weibo Short URL
-^http:\/\/t\.cn https://sinaurl.cn 302
 
 # Redirect False to True
 # > IGN China to IGN Global
