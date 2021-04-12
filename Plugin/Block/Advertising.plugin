@@ -18,7 +18,7 @@
 # --- (Alibaba) ---
 # > Taobao - gw.alicdn.com,heic.alicdn.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/.+\.jpg_(9\d{2}|\d{4}) - reject
-^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_9\d{2} - reject
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) - reject
 # > Xianyu - acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ - reject
 # > Fliggy - acs.m.taobao.com
@@ -35,6 +35,7 @@
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 # > YOUKU
 ^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 - reject
 # ---
 # > AcFun - api-new.app.acfun.cn
 ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
@@ -58,6 +59,7 @@
 ^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo - reject
 ^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog) - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\/\w+\/(sync|newRnSync|mlog) - reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/c\/s\/splashSchedule - reject
 # > Baidu Map - newclient.map.baidu.com
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
 # > Baidu InputMethod - mime.baidu.com
@@ -120,7 +122,7 @@
 # > douban - api.douban.com
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ - reject
 # > DouYuZhiBo - rtbapi.douyucdn.cn
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo\?uid=&mdid=iphone&client_sys=ios$ - reject
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo - reject
 # > Dangdang - e.dangdang.com
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init - reject
 ^https?:\/\/e\.dangdang\.com\/media\/api\d\.go\?action=getDeviceStartPage - reject
@@ -146,8 +148,9 @@
 ^https?:\/\/mobile-api2011.elong.com\/(adgateway|adv)\/ - reject
 # > eDaijia
 ^https?:\/\/pic\.edaijia\.cn\/adsplash\/ - reject
-# > eleme - cube.elemecdn.com
+# > eleme
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - reject
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/ - reject
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - reject
 ^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? - reject
 # > ezviz ViedoGo - i.ys7.com
@@ -186,6 +189,8 @@
 ^https?:\/\/api\.huomao\.com\/channels\/loginAd - reject
 # > HanjuTV
 ^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? - reject
+# > Huya - business.msstatic.com
+^https?:\/\/business\.msstatic\.com\/advertiser\/ - reject
 
 # I
 # > iFLY Input - imeclient.openspeech.cn
@@ -209,6 +214,9 @@
 # > iFreeTimebook - icc.one,jxd524.github.io
 ^https?:\/\/jxd524\.github\.io\/iFreeTime\/xid32uxaoecnfv2\/ - reject
 ^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ - reject
+# > IKOSPro
+^https?:\/\/tracker-download\.oss-cn-beijing\.aliyuncs\.com\/SIMPlus\/ad_ - reject
+^https?:\/\/tracker-download\.oss-cn-beijing\.aliyuncs\.com\/SIMPlus\/AD\/ - reject
 
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
@@ -259,7 +267,7 @@
 # > ManHuaRen
 ^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getStartPageAds - reject
 # > Meituan-Dianping - img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net
-^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
+^https?:\/\/img\.meituan\.net\/(adunion|display|dpmobile|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) - reject
 ^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg - reject
 ^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp - reject
@@ -334,6 +342,8 @@
 ^https?:\/\/msspjh\.emarbox\.com\/getAdConfig - reject
 ^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising - reject
 ^https?:\/\/api\.rr\.tv\/ad\/ - reject
+# > RELX - app.relxtech.com
+^https?:\/\/app\.relxtech\.com\/dianziyan-api\/api\/screen\/advert\/random - reject
 
 # S
 # ---(Sina)---
@@ -494,4 +504,4 @@
 # Block Ads End
 
 [MITM]
-hostname = api.21jingji.com,service.4gtv.tv,app.58.com,pic?.ajkimg.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,api-new.app.acfun.cn,api.bjxkhc.com,*.amemv.com,*.snssdk.com,issuecdn.baidupcs.com,pan.baidu.com,newclient.map.baidu.com,mime.baidu.com,act.vip.iqiyi.com,app.bilibili.com,manga.bilibili.com,channel.beitaichufang.com,iapi.bishijie.com,app.api.ke.com,www.bodivis.com.cn,yxyapi*.drcuiyutao.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.chelaile.net.cn,web.chelaile.net.cn,cap.caocaokeji.cn,api.caijingmobile.com,gw.csdn.net,m.ctrip.com,app.poizon.com,api.douban.com,rtbapi.douyucdn.cn,e.dangdang.com,daoyu.sdo.com,*.daydaycook.com,maicai.api.ddxq.mobi,mobile-api2011.elong.com,123.59.31.1,119.18.193.135,cube.elemecdn.com,i.ys7.com,www.flyertea.com,dsa-mfp.fengshows.cn,api.feng.com,*-release.wuta-cam.com,www.youtube.com,s.youtube.com,gateway.shouqiev.com,dl.app.gtja.com,smkmp.96225.com,api.huomao.com,imeclient.openspeech.cn,api.intsig.net,ih2.ireader.com,nnapp.cloudbae.cn:0,ib-soft.net,www.inoreader.com,list-app-m.i4.cn,icc.one,jxd524.github.io,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jxedt.com,richmanapi.jxedt.com,*.kakamobi.cn,app-api.jinse.com,ios.wps.cn,*.kingsoft-office-service.com,api.gotokeep.com,api.kkmh.com,122.14.246.33,175.102.178.52,api.club.lenovo.cn,api.jr.mi.com,api-mifit*.huami.com,api.mgzf.com,cdn.moji.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,capi.mwee.cn,mapi.mafengwo.cn,app.mixcapp.com,appconf.mail.163.com,c.m.163.com,client.mail.163.com,interface*.music.163.com,sp.kaola.com,support.you.163.com,p.du.163.com,app-api.niu.com,gfp.veta.naver.com,slapi.oray.net,pss.txffp.com,api.yangkeduo.com,api.pinduoduo.com,mrobot.pconline.com.cn,mrobot.pcauto.com.cn,open.qyer.com,media.qyer.com,api.qbb6.com,mage.if.qidian.com,msspjh.emarbox.com,api.rr.tv,*.uve.weibo.com,weibointl.api.weibo.cn,tqt.weibo.cn,*.k.sohu.com,*.tv.sohu.com,ap*.smzdm.com,gw-passenger.01zhuanche.com,mpcs.suning.com,ccsp-egmas.sf-express.com,consumer.fcbox.com,g.cdn.pengpengla.com,snailsleep.net,api*.futunn.com,ssl.kohsocialapp.qq.com,4gimg.map.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com,m.tuniu.com,mob.mddcloud.com,img*.10101111cdn.com,api.vuevideo.net,app.variflight.com,api.cdmcaac.com,api.vistopia.com.cn,app.wy.guahao.com,thor.weidian.com,api.wallstcn.com,api.xiachufang.com,api.psy-1.com,portal-xunyou.qingcdn.com,api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228,www.xiaohongshu.com,app.yinxiang.com,restapi.iyunmai.com,www.zhihu.com,api.zhihu.com,a.qiumibao.com,*.zhuishushenqi.com,www.zybang.com,api.izuiyou.com,tiku.zhan.com,webboot.zhangyue.com,saad.ms.zhangyue.net
+hostname = api.21jingji.com,service.4gtv.tv,app.58.com,pic?.ajkimg.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,api-new.app.acfun.cn,api.bjxkhc.com,*.amemv.com,*.snssdk.com,issuecdn.baidupcs.com,pan.baidu.com,newclient.map.baidu.com,mime.baidu.com,act.vip.iqiyi.com,app.bilibili.com,manga.bilibili.com,channel.beitaichufang.com,iapi.bishijie.com,app.api.ke.com,www.bodivis.com.cn,yxyapi*.drcuiyutao.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.chelaile.net.cn,web.chelaile.net.cn,cap.caocaokeji.cn,api.caijingmobile.com,gw.csdn.net,m.ctrip.com,app.poizon.com,api.douban.com,rtbapi.douyucdn.cn,e.dangdang.com,daoyu.sdo.com,*.daydaycook.com,maicai.api.ddxq.mobi,mobile-api2011.elong.com,123.59.31.1,119.18.193.135,i.ys7.com,www.flyertea.com,dsa-mfp.fengshows.cn,api.feng.com,*-release.wuta-cam.com,www.youtube.com,s.youtube.com,gateway.shouqiev.com,dl.app.gtja.com,smkmp.96225.com,api.huomao.com,business.msstatic.com,imeclient.openspeech.cn,api.intsig.net,ih2.ireader.com,nnapp.cloudbae.cn:0,ib-soft.net,www.inoreader.com,list-app-m.i4.cn,icc.one,jxd524.github.io,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jxedt.com,richmanapi.jxedt.com,*.kakamobi.cn,app-api.jinse.com,ios.wps.cn,*.kingsoft-office-service.com,api.gotokeep.com,api.kkmh.com,122.14.246.33,175.102.178.52,api.club.lenovo.cn,api.jr.mi.com,api-mifit*.huami.com,api.mgzf.com,cdn.moji.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,capi.mwee.cn,mapi.mafengwo.cn,app.mixcapp.com,appconf.mail.163.com,c.m.163.com,client.mail.163.com,interface*.music.163.com,sp.kaola.com,support.you.163.com,p.du.163.com,app-api.niu.com,gfp.veta.naver.com,slapi.oray.net,pss.txffp.com,api.yangkeduo.com,api.pinduoduo.com,mrobot.pconline.com.cn,mrobot.pcauto.com.cn,open.qyer.com,media.qyer.com,api.qbb6.com,mage.if.qidian.com,msspjh.emarbox.com,api.rr.tv,app.relxtech.com,*.uve.weibo.com,weibointl.api.weibo.cn,tqt.weibo.cn,*.k.sohu.com,*.tv.sohu.com,ap*.smzdm.com,gw-passenger.01zhuanche.com,mpcs.suning.com,ccsp-egmas.sf-express.com,consumer.fcbox.com,g.cdn.pengpengla.com,snailsleep.net,api*.futunn.com,ssl.kohsocialapp.qq.com,4gimg.map.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com,m.tuniu.com,mob.mddcloud.com,img*.10101111cdn.com,api.vuevideo.net,app.variflight.com,api.cdmcaac.com,api.vistopia.com.cn,app.wy.guahao.com,thor.weidian.com,api.wallstcn.com,api.xiachufang.com,api.psy-1.com,portal-xunyou.qingcdn.com,api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228,www.xiaohongshu.com,app.yinxiang.com,restapi.iyunmai.com,www.zhihu.com,api.zhihu.com,a.qiumibao.com,*.zhuishushenqi.com,www.zybang.com,api.izuiyou.com,tiku.zhan.com,webboot.zhangyue.com,saad.ms.zhangyue.net
