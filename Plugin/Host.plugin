@@ -1,4 +1,4 @@
-[host]
+[Host]
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
 *.jd.com = server:119.28.28.28
