@@ -21,4 +21,4 @@ DOMAIN-SUFFIX, ipstatp.com, REJECT
 http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音去水印
 
 [MITM]
-hostname = *.amemv.com
+hostname = api?-*-*-*.amemv.com
