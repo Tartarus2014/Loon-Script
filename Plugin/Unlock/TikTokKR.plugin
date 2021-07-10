@@ -12,11 +12,13 @@ DOMAIN-KEYWORD,-tiktokcdn-com
 USER-AGENT,tiktok*
 
 [URL Rewrite]
-#tiktok解锁直播区域限制
 (?<=_region=)CN(?=&) KR 307
+(^h.+v5\/)(.+) $1 302
 (?<=&mcc_mnc=)4 2 307
-^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
-(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 18.4 307
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
+
+[Script]
+http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://gitee.com/bp233/copywriting-assistant/raw/master/k8.js, requires-body=true, timeout=10, tag=TK去水印
 
 [MITM]
-hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
+hostname = *.tiktokv.com,*.byteoversea.com, *.tik-tokapi.com
