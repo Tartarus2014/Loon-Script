@@ -1,5 +1,5 @@
-# YouTube
-# Premium 勿用
+#!name = YouTube去广告
+#!desc= YouTube去广告 （Premium 勿用）
 
 [Rule]
 URL-REGEX,https:\/\/[\s\S]*\.googlevideo\.com/.*&(oad|ctier),REJECT
