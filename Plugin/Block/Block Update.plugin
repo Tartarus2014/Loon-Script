@@ -1,5 +1,5 @@
-# Block iOS Software Update
-# 屏蔽 iOS 系统更新
+#!name = Block iOS Software Update
+#!desc= 屏蔽 iOS 系统更新
 
 [Rule]
 DOMAIN,mesu.apple.com,REJECT
