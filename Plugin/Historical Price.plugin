@@ -1,3 +1,6 @@
+#!name= Historical Price
+#!desc= 京东淘宝历史价格
+
 [Script]
 # 京东历史价格
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path= https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, tag=京东比价
