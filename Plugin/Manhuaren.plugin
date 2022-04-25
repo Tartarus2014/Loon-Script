@@ -1,5 +1,5 @@
-# 去除漫画人广告
-# 漫画人链接：https://www.manhuaren.com/
+#!name= 漫画人去广告
+#!desc= 漫画人下载链接：https://www.manhuaren.com/
 
 [Rule]
 URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/getShelfActivity,REJECT
