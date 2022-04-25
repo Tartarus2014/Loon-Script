@@ -1,6 +1,5 @@
-# ZhiHu Ads
-# 知乎去广告及功能增强
-# Github链接：https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
+#!name= 知乎去广告
+#!desc= 项目Github链接：https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
 
 [Rule]
 # 知乎去广告
