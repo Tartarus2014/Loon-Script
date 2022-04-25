@@ -1,3 +1,1 @@
-# 警告
-
-# YouTube去广告 Premium 勿用
+# 一些去广告
