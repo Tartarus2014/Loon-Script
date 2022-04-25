@@ -1,5 +1,7 @@
+#!name= EMBYPJ
+
 [Script]
-http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0, script-path=https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embyPremiere.js, tag=EMBY
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0, script-pathhttps://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=EMBY
 
 [MITM]
 hostname = mb3admin.com
