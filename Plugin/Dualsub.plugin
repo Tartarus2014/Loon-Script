@@ -1,8 +1,0 @@
-# 需要配合 https://www.icloud.com/shortcuts/136b52e6452b4a10b3ea647f925cddd0  使用
-
-[script]
-http-response https:\/\/(.+media.(dss|star)ott|manifests.v2.api.hbo|.+hbomaxcdn|.+nflxvideo).(com|net)\/((.+(.vtt|-all-.+.m3u8.*))|hls.m3u8.+|\?o=\d+&v=\d+&e=.+) script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js, requires-body=1,tag = Dualsub
-http-request https:\/\/(setting|www).(media.(dss|star)ott|hbomaxcdn|nflxvideo|youtube).(com|net)\/(\?action=(g|s)et|api\/timedtext.+) script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js,tag = Dualsub-setting,requires-body=1
-
-[MITM]
-hostname = *.media.dssott.com, *.media.starott.com, *.api.hbo.com, *.hbomaxcdn.com, *.nflxvideo.net, *.youtube.com
