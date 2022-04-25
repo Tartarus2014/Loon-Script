@@ -1,3 +1,5 @@
+#!name = Bilibili 去广告
+
 [Rule]
 # 去广告
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
