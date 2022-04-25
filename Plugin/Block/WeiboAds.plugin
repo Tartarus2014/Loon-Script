@@ -1,4 +1,4 @@
-#!name = 微博去广告
+#!name= 微博去广告
 
 [Rule]
 DOMAIN-suffix, wbpctips.mobile.sina.cn, REJECT
