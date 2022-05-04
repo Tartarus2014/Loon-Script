@@ -1,43 +1,25 @@
 #!name=Weibo
 #!desc=Weibo app removes ad.
 
-[Rule]
-DOMAIN-suffix, wbpctips.mobile.sina.cn, REJECT
-DOMAIN-suffix, wbclick.mobile.sina.cn, REJECT
-DOMAIN-suffix, wbapp.mobile.sina.cn, REJECT
-DOMAIN-suffix, wb.gtimg.com, REJECT
-DOMAIN-suffix, wapwbclick.mobile.sina.cn, REJECT
-DOMAIN-suffix, weibocdn.com, DIRECT
-DOMAIN-suffix, weibo.com, DIRECT
-DOMAIN-suffix, zymo.mps.weibo.com, REJECT
-DOMAIN-suffix, weibomingzi.com, REJECT
-DOMAIN-suffix, sdkapp.uve.weibo.com, REJECT
-DOMAIN-suffix, s.alitui.weibo.com, REJECT
-DOMAIN-suffix, promote.biz.weibo.cn, REJECT
-DOMAIN-suffix, gw6.push.mcp.weibo.cn, REJECT
-DOMAIN-suffix, gw5.push.mcp.weibo.cn, REJECT
-DOMAIN-suffix, game.weibo.com, REJECT
-DOMAIN-suffix, game.weibo.cn, REJECT
-DOMAIN-suffix, biz.weibo.com, REJECT
-DOMAIN-suffix, alitui.weibo.com, REJECT
-DOMAIN-suffix, adimg.uve.weibo.com, REJECT
-
 [Script]
-// 微博下面的评论
-http-response ^https://(api\.weibo\.cn|mapi\.weibo\.com)/2/comments/build_comments\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/weibo/weibo_comment.js
-// 微博 推荐 热门/榜单/放映厅… https://api.weibo.cn/2/statuses/unread_hot_timeline?
-// 微博 最新微博 https://api.weibo.cn/2/statuses/friends/timeline?
-// 视频流（短视频上划，微博继续推荐新视频） https://api.weibo.cn/2/video/tiny_stream_video_list?
-// 微博 全部关注 https://api.weibo.cn/2/statuses/unread_friends_timeline?
-http-response ^https://(api\.weibo\.cn|mapi\.weibo\.com)/2/(statuses/unread_hot_timeline|statuses/friends/timeline|video/tiny_stream_video_list|statuses/unread_friends_timeline)\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/weibo/weibo_statuses.js
-// 发现 热点 https://api.weibo.cn/2/cardlist?
-// 发现 搜索 https://api.weibo.cn/2/searchall?
-// 超话 帖子/精华/官方 https://api.weibo.cn/2/page?
-http-response ^https://(api\.weibo\.cn|mapi\.weibo\.com)/2/(cardlist|searchall|page)\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/weibo/weibo_cardlist.js
-// 每条微博下面 创作者广告共享计划
-http-response ^https://(api\.weibo\.cn|mapi\.weibo\.com)/2/statuses/extend\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/weibo/weibo_statuses_extend.js
-// 开屏广告
-http-response ^https://sdkapp\.uve\.weibo\.com/interface/sdk/sdkad\.php$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/weibo/weibo_sdkad.js
+# > 微博个人信息
+http-response ^https?:\/\/api\.weibo\.cn\/2\/profile\?gsid= script-path=https://hub.nan.ge/Script/Weibo/Profile.js, requires-body=true, timeout=10, tag=主页
+
+http-response ^https?:\/\/api\.weibo\.cn\/2\/users\/(show|relation) script-path=https://hub.nan.ge/Script/Weibo/UserShow.js, requires-body=true, timeout=10, tag=个人信息
+
+http-response ^https?:\/\/new\.vip\.weibo\.cn\/aj\/vipcenter\/home script-path=https://hub.nan.ge/Script/Weibo/VIPCenter.js, requires-body=true, timeout=10, tag=会员中心
+
+http-response ^https?:\/\/api\.weibo\.cn\/2\/(direct_messages\/user_list|messageflow\/notice)\?gsid= script-path=https://hub.nan.ge/Script/Weibo/Message.js, requires-body=true, timeout=10, tag=消息列表
+# > 微博去广告
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(profile/(me|statuses)|searchall|statuses/(unread_hot_timeline|extend|video_mixtimeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|container/get_item) script-path=https://hub.nan.ge/Script/Weibo/Weibo.js, requires-body=true, timeout=10, tag=扩展
+
+http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path=https://hub.nan.ge/Script/Weibo/Launch.js, requires-body=true, timeout=10, tag=开屏
+
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist|wbox\/.+\/createrIndex|st_videos\/tiny\/effect\/shoot_display_config)|video/tiny_stream_video_list|photo/info|remind/unread_count) script-path=https://hub.nan.ge/Script/Weibo/Timeline.js, requires-body=true, timeout=10, tag=微博
+ 
+http-response ^https?:\/\/pay\.sc\.weibo\.com\/api\/client\/sdk\/app\/indexnew\/(index|person) script-path=https://hub.nan.ge/Script/Weibo/Wallet.js, requires-body=true, timeout=10, tag=微博钱包
+
+cron "0 0 1 1 * ?" script-path=https://hub.nan.ge/Script/Weibo/Config.js, enabled=false, tag=微博去广告配置
 
 [MITM]
-hostname = api.weibo.cn, mapi.weibo.com, sdkapp.uve.weibo.com
+hostname = *.uve.weibo.com, api.weibo.cn, api.weibo.com, mapi.weibo.com, mapi.weibo.cn, h5.sinaimg.cn, new.vip.weibo.cn, pay.sc.weibo.com
