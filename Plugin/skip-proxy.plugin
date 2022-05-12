@@ -1,0 +1,5 @@
+#!name=跳过代理检测
+#!desc=跳过部分应用的代理检测，网上国网、顺丰金融、广东农信、建行生活、小影、丰云行
+
+[General]
+skip-proxy = www.baidu.com,yunbusiness.ccb.com,www.apple.com
