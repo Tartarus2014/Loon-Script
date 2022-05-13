@@ -1,4 +1,5 @@
 #!name= EMBYPJ
+#!icon= https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
 
 [Script]
 http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0, script-pathhttps://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=EMBY
