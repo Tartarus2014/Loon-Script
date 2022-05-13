@@ -1,3 +1,6 @@
+#!name= TikTokUK
+#!icon= https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/TikTok.png
+
 [Rule]
 DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,ibytedtos.com
