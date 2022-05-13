@@ -1,5 +1,6 @@
 #!name= YouTube去广告
 #!desc= YouTube去广告 （Premium 勿用且版本需 ＞ 15.26.4）
+#!icon= 
 
 [URL Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 header
