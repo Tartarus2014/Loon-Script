@@ -1,5 +1,6 @@
 #!name= TF-Download
 #!desc= 该插件阅仅适用于Loon, 用于更新TestFlight App时, 提示"APP不可用"问题. 解除区域限制.
+#!icon= https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/TestFlight.png
 
 [Mitm]
 hostname=testflight.apple.com
