@@ -13,13 +13,3 @@
 使用方法：
 
 操作流程：配置-插件-订阅插件
-
-建议：
-
-# 建议用户订阅Advertising.plugin，General.plugin，Host.plugin。以获得更优秀的用户体验。
-
-Host:          https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Host.plugin
-
-Advertising：  https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Block/Advertising.plugin
-
-General：      https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/General.plugin
