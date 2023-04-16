@@ -48,7 +48,7 @@
 # ddg：DuckDuckGo 搜索
 # 无指令则转 Google 搜索
 
-[URL Rewrite]
+[Rewrite]
 # wiki xxx (Wikipedia)
 ^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ https://wikipedia.org/wiki/$2 302
 
