@@ -22,7 +22,7 @@ DOMAIN-KEYWORD,tiktok, PROXY
 USER-AGENT,TikTok*, PROXY
 
 
-[URL Rewrite]
+[Rewrite]
 (?<=_region=)CN(?=&) JP 307
 (^h.+v5\/)(.+) $1 302
 (?<=&mcc_mnc=)4 2 307
