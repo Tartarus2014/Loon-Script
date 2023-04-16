@@ -1,7 +1,7 @@
 #!name= BilibiliPJ
 #!desc= IOS用户可以利用以上规则配合5.51.1版本哔哩哔哩食用（爱思助手可以下载历史版本）
 
-[URL Rewrite]
+[Rewrite]
 https:\/\/api.bilibili.com\/pgc\/view\/app\/season http://api.jucatyo.com/season 302
 https:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl http://api.jucatyo.com/playurl 302
 
