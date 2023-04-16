@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
 
 [script]
-generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Cloudflare_Speedtest.js,timeout=10,tag=节点网速测试
+generic script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/Cloudflare_Speedtest.js,timeout=10,tag=节点网速测试,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
 generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Domestic.png
 generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/ytb_check.js, tag=YouTube-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/nf_check.js, tag=Netflix-解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
