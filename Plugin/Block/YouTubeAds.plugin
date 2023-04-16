@@ -2,7 +2,7 @@
 #!desc= YouTube去广告 （Premium 勿用且版本需 ＞ 15.26.4）
 #!icon= https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/YouTube.png
 
-[URL Rewrite]
+[Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 header
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
 
