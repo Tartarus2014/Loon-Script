@@ -23,16 +23,16 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 [Script]
 # 微博
 # > 微博个人信息
-http-response ^https?:\/\/api\.weibo\.cn\/2\/profile\?gsid= script-path=https://hub.nan.ge/Script/Weibo/Profile.js, requires-body=true, timeout=10, tag=主页
-http-response ^https?:\/\/api\.weibo\.cn\/2\/users\/(show|relation) script-path=https://hub.nan.ge/Script/Weibo/UserShow.js, requires-body=true, timeout=10, tag=个人信息
-http-response ^https?:\/\/new\.vip\.weibo\.cn\/aj\/vipcenter\/home script-path=https://hub.nan.ge/Script/Weibo/VIPCenter.js, requires-body=true, timeout=10, tag=会员中心
-http-response ^https?:\/\/api\.weibo\.cn\/2\/(direct_messages\/user_list|messageflow\/notice)\?gsid= script-path=https://hub.nan.ge/Script/Weibo/Message.js, requires-body=true, timeout=10, tag=消息列表
+http-response ^https?:\/\/api\.weibo\.cn\/2\/profile\?gsid= script-path=https://hub.nange.cn/Script/Weibo/Profile.js, requires-body=true, timeout=10, tag=主页
+http-response ^https?:\/\/api\.weibo\.cn\/2\/users\/(show|relation) script-path=https://hub.nange.cn/Script/Weibo/UserShow.js, requires-body=true, timeout=10, tag=个人信息
+http-response ^https?:\/\/new\.vip\.weibo\.cn\/aj\/vipcenter\/home script-path=https://hub.nange.cn/Script/Weibo/VIPCenter.js, requires-body=true, timeout=10, tag=会员中心
+http-response ^https?:\/\/api\.weibo\.cn\/2\/(direct_messages\/user_list|messageflow\/notice)\?gsid= script-path=https://hub.nange.cn/Script/Weibo/Message.js, requires-body=true, timeout=10, tag=消息列表
 # > 微博去广告
-http-response ^https?://m?api\.weibo\.c(n|om)/2/(profile/(me|statuses)|searchall|statuses/(unread_hot_timeline|extend|video_mixtimeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|container/get_item) script-path=https://hub.nan.ge/Script/Weibo/Weibo.js, requires-body=true, timeout=10, tag=扩展
-http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path=https://hub.nan.ge/Script/Weibo/Launch.js, requires-body=true, timeout=10, tag=开屏
-http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist|wbox\/.+\/createrIndex|st_videos\/tiny\/effect\/shoot_display_config)|video/tiny_stream_video_list|photo/info|remind/unread_count) script-path=https://hub.nan.ge/Script/Weibo/Timeline.js, requires-body=true, timeout=10, tag=微博
-http-response ^https?:\/\/pay\.sc\.weibo\.com\/api\/client\/sdk\/app\/indexnew\/(index|person) script-path=https://hub.nan.ge/Script/Weibo/Wallet.js, requires-body=true, timeout=10, tag=微博钱包
-cron "0 0 1 1 * ?" script-path=https://hub.nan.ge/Script/Weibo/Config.js, enabled=false, tag=微博去广告配置
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(profile/(me|statuses)|searchall|statuses/(unread_hot_timeline|extend|video_mixtimeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|container/get_item) script-path=https://hub.nange.cn/Script/Weibo/Weibo.js, requires-body=true, timeout=10, tag=扩展
+http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path=https://hub.nange.cn/Script/Weibo/Launch.js, requires-body=true, timeout=10, tag=开屏
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist|wbox\/.+\/createrIndex|st_videos\/tiny\/effect\/shoot_display_config)|video/tiny_stream_video_list|photo/info|remind/unread_count) script-path=https://hub.nange.cn/Script/Weibo/Timeline.js, requires-body=true, timeout=10, tag=微博
+http-response ^https?:\/\/pay\.sc\.weibo\.com\/api\/client\/sdk\/app\/indexnew\/(index|person) script-path=https://hub.nange.cn/Script/Weibo/Wallet.js, requires-body=true, timeout=10, tag=微博钱包
+cron "0 0 1 1 * ?" script-path=https://hub.nange.cn/Script/Weibo/Config.js, enabled=false, tag=微博去广告配置
 
 # Display netflix ratings（IMDb）
 h http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, requires-body=true, timeout=10, tag=奈菲评分
