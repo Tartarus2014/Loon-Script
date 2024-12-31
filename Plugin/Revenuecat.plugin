@@ -1,4 +1,5 @@
-
+#!name= Revenuecat
+#!desc= 通杀脚本
 
 [URL Rewrite]
 ^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) https://rc-backup.lovebabyforever.workers.dev header
