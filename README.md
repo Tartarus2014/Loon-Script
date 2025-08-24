@@ -12,14 +12,6 @@
 
 * 只测试自用脚本，其他大部分脚本未测试可用性.
 
-### Loon插件订阅配置 ：
-
-* [Advertising.plugin](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.plugin) 去广告插件
-
-* [Host.plugin](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Host.plugin) Host
-
-* [General.plugin](https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/General.plugin) General
-
 ## 免责声明 ：
 
 * Tartarus2014发布的Loon-Script项目中涉及的任何解锁和解密分析脚本仅用于资源共享和学习研究，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.

@@ -1,14 +1,10 @@
 插件 ：
 
-（1）目前插件里面支持 ：Rule，URL Rewrite ，Script，Hostname， Host。
+（1）目前插件里面支持 ：[General],[rule],[rewrite],[host],[script],[mitm]
 
-（2）Rule部分：策略可设置为DIRECT,REJECT,PROXY。
+（2）插件是规则、复写、脚本的集合，相当于一个子配置，常常用来代表一个扩展功能。
 
-（3）插件内DIRECT就会匹配直连，REJECT就会匹配拒绝。PROXY为用户在app中手动映射的策略，Rule部分不跟随策略默认使用PROXY。
-
-（4）插件可以是一个单独配置 它包含了Rule，URL Rewrite ，Script，Hostname， Host。
-
-（5）官方事例链接： https://github.com/Loon0x00/LoonExampleConfig/tree/master/Plugin
+（3）官方事例链接： https://nsloon.app/docs/Plugin/
 
 使用方法：
 
