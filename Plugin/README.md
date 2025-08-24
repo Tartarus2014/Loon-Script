@@ -14,7 +14,6 @@
 
 # Loon 插件示例
 
-[
 #!name = 插件名称
 #!desc = 这是一个带有配置项的插件，input代表输入，select代表选择（select的第一项为名称，后面为可选值），用户所填或者选择的值都可以在脚本中用$persistentStore.read进行读取，如$persistentStore.read(appName)
 #!author = 插件作者
@@ -51,12 +50,11 @@ http-response ^https?:\/\/example\.com\/conf\/server-mapping script-path = remov
 
 [mitm]
 example.com
-]
 
 
 # 注释参数
 
-以[#!]开头可以添加注释
+以 [#!] 开头可以添加注释
 
 * #!name：插件名字
 * #!desc：插件的功能描述等
