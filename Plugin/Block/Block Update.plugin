@@ -1,7 +1,7 @@
 #!name = Block OTA update for iOS and iPadOS
-#!desc= 屏蔽 iOS/iPadOS 系统更新，无 iPad 设备可在「主机名」添加「-mesu.apple.com」
-#!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-#!author= ConnersHua
+#!desc = 屏蔽 iOS/iPadOS 系统更新，无 iPad 设备可在「主机名」添加「-mesu.apple.com」
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+#!author = ConnersHua
 
 [Rule]
 DOMAIN,gdmf.apple.com,REJECT

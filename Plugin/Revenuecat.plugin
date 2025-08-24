@@ -1,5 +1,6 @@
 #!name= Revenuecat
 #!desc = 通杀脚本
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 
 [URL Rewrite]
 ^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) https://rc-backup.lovebabyforever.workers.dev header

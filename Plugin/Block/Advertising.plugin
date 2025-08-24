@@ -1,6 +1,6 @@
 #!name = Advertising
-#!desc= 去广告
-#!author= ConnersHua
+#!desc = 去广告
+#!author = ConnersHua
 
 [Rewrite]
 (?i)\b\/ad\/ - reject
