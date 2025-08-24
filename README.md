@@ -12,16 +12,6 @@
 
 * 只测试自用脚本，其他大部分脚本未测试可用性.
 
-
-### Loon脚本订阅配置 ：
-* [文字教程](https://github.com/TiyNa/LoonManual)
-
-* [Script.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf) 脚本订阅
-
-* [Cookie.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Cookie.conf)获取Cookie订阅
-
-* [Task.conf](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf) 定时任务订阅
-
 ### Loon插件订阅配置 ：
 
 * [Advertising.plugin](https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.plugin) 去广告插件
