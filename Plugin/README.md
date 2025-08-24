@@ -11,62 +11,9 @@
 操作流程：配置-插件-订阅插件
 
 
-
-# Loon 插件示例
-
-#!name = 插件名称
-
-#!desc = 这是一个带有配置项的插件，input代表输入，select代表选择（select的第一项为名称，后面为可选值），用户所填或者选择的值都可以在脚本中用$persistentStore.read进行读取，如$persistentStore.read(appName)
-
-#!author = 插件作者
-
-#!homepage = 插件首页，可在插件页面进行跳转
-
-#!icon = 插件的图标
-
-#!input = appName
-
-#!input = author
-
-#!select = appType,tool,social,health,sport
-
-#!select = price,0.99,1.99,4.99
-
-#!system = iOS,iPadOS,tvOS,macOS
-
-#!system_version = 15
-
-#!loon_version = 3.2.1(372)
-
-#!tag = 去广告,Youtube
-
-[Argument]
-arg1 = input,"default-placehodler-content",tag=参数1的标题,desc=这是一个输入参数的说明
-arg2 = select,"select1","select2","select2",tag=参数2的标题,desc=这是一个选择类型的参数说明
-arg3 = switch,true,tag=参数3的标题,desc=这是一个true、false的切换参数
-
-[General]
-bypass-tun =
-skip-proxy =
-real-ip =
-dns-server =
-
-[rule]
-
-[rewrite]
-
-[host]
-
-[script]
-http-response ^https?:\/\/example\.com\/conf\/server-mapping script-path = remove_ads.js, requires-body = true, tag = 移除广告,argument=[{arg1},{arg2},{arg3}]
-
-[mitm]
-example.com
-
-
 # 注释参数
 
-以>#!>开头可以添加注释
+以#!开头可以添加注释
 
 * #!name：插件名字
 * #!desc：插件的功能描述等
