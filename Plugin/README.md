@@ -9,3 +9,5 @@
 使用方法：
 
 操作流程：配置-插件-订阅插件
+
+.lpx意为Loon Plugin Extension的缩写，即Loon插件扩展。
