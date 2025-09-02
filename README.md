@@ -20,6 +20,19 @@
 
 * Tartarus2014 保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或For-own-use项目的规则，则视为您已接受此免责声明.
 
+## Loon后缀说明 ：
+
+* .lsr意为Loon Shunt Rules的缩写，即Loon分流规则。
+
+* .lpx意为Loon Plugin Extension的缩写，即Loon插件扩展。
+
+* .ltx意为Loon Task Extension的缩写，即Loon任务扩展。
+
+* .lcf意为Loon Configuration File的缩写，即Loon配置文件。
+
+* .jq是复写使用的JQLang命令文件，多行带注释的JQ命令写入文件后使用此文件扩展名。
+
+
 ### 特别感谢 ：
 * [@NobyDa](https://github.com/NobyDa)
 
