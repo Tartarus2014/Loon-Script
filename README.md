@@ -33,6 +33,27 @@
 * .jq是复写使用的JQLang命令文件，多行带注释的JQ命令写入文件后使用此文件扩展名。
 
 
+## 官方文档地址：https://nsloon.app/docs/intro
+
+- [General](https://nsloon.app/docs/category/其他配置)
+
+- [节点格式](https://nsloon.app/docs/Node/)
+
+- [规则格式](https://nsloon.app/docs/category/规则)
+
+- [复写格式](https://nsloon.app/docs/category/复写)
+
+- [脚本格式](https://nsloon.app/docs/Script/)
+
+- [脚本API](https://nsloon.app/docs/Script/script_api)
+
+- [DNS格式](https://nsloon.app/docs/category/dns)
+
+- [插件格式](https://nsloon.app/docs/category/插件)
+
+- [scheme格式](https://nsloon.app/docs/category/scheme)
+
+
 ### 特别感谢 ：
 * [@NobyDa](https://github.com/NobyDa)
 

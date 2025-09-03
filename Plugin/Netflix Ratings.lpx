@@ -1,6 +1,9 @@
 #!name = Netflix Ratings
 #!desc = Netflix评分（IMDb、douban）
 #!author = yichahucha
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 
 [Script]

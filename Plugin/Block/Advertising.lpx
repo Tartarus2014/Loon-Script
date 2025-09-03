@@ -1,6 +1,9 @@
 #!name = Advertising
 #!desc = 去广告
 #!author = ConnersHua
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
 
 [Rewrite]
 (?i)\b\/ad\/ - reject

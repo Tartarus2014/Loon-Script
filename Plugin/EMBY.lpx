@@ -1,5 +1,8 @@
 #!name = embyUnlocked
 #!desc = Emby破解
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
 #!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
 
 [Script]

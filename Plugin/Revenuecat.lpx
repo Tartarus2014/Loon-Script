@@ -1,5 +1,8 @@
 #!name= Revenuecat
 #!desc = 通杀脚本
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 
 [URL Rewrite]
