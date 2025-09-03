@@ -1,20 +1,3 @@
-#!name = Skip Proxy And Real-IP Lists
-#!desc = 跳过部分应用的代理检测
-#!author = mieqq
-#!system = 
-#!system_version = 
-#!loon_version = 3.3.2(877)
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-#!homepage = https://github.com/Tartarus2014/Loon-Script/blob/master/Plugin/skip-proxy.md
-
-[General]
-skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,id6.me
-real-ip = easy-login.10099.com.cn,*-update.xoyocdn.com,id6.me,open.e.189.cn
-
-[Rule]
-DOMAIN,msmp.abchina.com.cn,REJECT
-
-
 # www.baidu.com：网上国网、多看阅读、顺丰金融、广东农信、丰云行、中国银行缤纷生活、通信行程卡app、趣智校园、趣听音乐、光大手机银行、掌上12333、沃视频
 # yunbusiness.ccb.com 建行生活
 # wxh.wo.cn：沃小号
