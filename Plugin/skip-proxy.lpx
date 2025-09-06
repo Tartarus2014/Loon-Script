@@ -1,7 +1,7 @@
 #!name = Skip Proxy And Real-IP Lists
 #!desc = 跳过部分应用的代理检测
 #!author = mieqq
-#!system = 
+#!system = iOS,iPadOS,tvOS,macOS
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png

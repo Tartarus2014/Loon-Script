@@ -1,7 +1,7 @@
 #!name = Fuck Telegram bad IPs
 #!desc = 将 tg 的垃圾 IP 转移到好的 IP 上
 #!author = mieqq
-#!system = 
+#!system = iOS,iPadOS,tvOS,macOS
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!homepage = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png

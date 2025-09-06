@@ -2,7 +2,7 @@
 #!desc = 屏蔽 iOS/iPadOS 系统更新，无 iPad 设备可在「主机名」添加「-mesu.apple.com」
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 #!author = ConnersHua
-#!system = 
+#!system = iOS,iPadOS
 #!system_version = 
 #!loon_version = 3.3.2(877)
 
