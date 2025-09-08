@@ -4,7 +4,7 @@
 #!system = iOS,iPadOS,tvOS,macOS
 #!system_version = 
 #!loon_version = 3.3.4(895)
-#!homepage = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 
 [Host]
 # Fuck Telegram bad ips
