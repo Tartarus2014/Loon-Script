@@ -29,6 +29,7 @@ sni-sniffing = true
 disconnect-on-policy-change = true
 # Domain blocking behavior
 domain-reject-mode = DNS
+dns-reject-mode = LoopbackIP
 # > Skip Proxy
 # Skip a domain or IP range; these target hosts will not be handled by Loon Proxy.
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com

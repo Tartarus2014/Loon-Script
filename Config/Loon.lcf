@@ -29,6 +29,7 @@ sni-sniffing = true
 disconnect-on-policy-change = true
 # 域名拦截行为
 domain-reject-mode = DNS
+dns-reject-mode = LoopbackIP
 # > 跳过代理
 # 跳过某个域名或者 IP 段，这些目标主机将不会由 Loon Proxy 处理。
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
@@ -67,7 +68,6 @@ resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/rele
 [Proxy]
 
 [Remote Proxy]
-机场订阅 = https://suo.yt/W7BkpTS
 
 [Proxy Group]
 FINAL = select, DIRECT, 节点选择, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
@@ -77,7 +77,6 @@ FINAL = select, DIRECT, 节点选择, img-url = https://raw.githubusercontent.co
 油管视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 巴哈姆特 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 电报消息 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-国外媒体 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
 港台番剧 = select, DIRECT, 台湾节点, 香港节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
 香港节点 = url-test, 香港, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 台湾节点 = url-test, 台湾, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
@@ -102,7 +101,6 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=油管视频, tag=油管视频, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=奈飞视频, tag=奈飞视频, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Bahamut/Bahamut.list, policy=巴哈姆特, tag=巴哈姆特, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list, policy=节点选择, tag=国外媒体, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBili/BiliBili.list, policy=港台番剧, tag=国内媒体, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=电报消息, tag=电报消息, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=节点选择, tag=全球规则, enabled=true
