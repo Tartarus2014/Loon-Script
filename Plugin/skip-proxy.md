@@ -10,3 +10,4 @@
 # *-update.xoyocdn.com 剑网三无界
 # id6.me 中国电信一键登陆
 # msmp.abchina.com.cn 农业银行
+# server.ovital.com:443 奥维互动地图
