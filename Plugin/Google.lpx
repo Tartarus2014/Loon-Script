@@ -1,0 +1,15 @@
+#!name = 谷歌搜索重定向
+#!desc = Google搜索中国、香港、日本重定向
+#!author = Tartarus
+#!system = iOS,iPadOS,tvOS,macOS
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
+
+[Rewrite]
+^https:\/\/www.google.cn\/* https://www.google.com/search 302
+^https:\/\/www.google.co.jp\/* https://www.google.com/search 302
+^https:\/\/www.google.com.hk\/* https://www.google.com/search 302
+
+[MITM]
+hostname = *.google.com.hk, *.google.cn, *.google.co.jp
