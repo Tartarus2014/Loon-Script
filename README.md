@@ -65,8 +65,6 @@
 
 * [@yichahucha](https://github.com/yichahucha)
 
-* [@onewayticket255](https://github.com/onewayticket255)
-
 * [@Neurogram-R](https://github.com/Neurogram-R)
 
 * [@公众号墨鱼手记](https://github.com/ddgksf2013)
