@@ -90,6 +90,10 @@ FINAL = select, DIRECT, 节点选择, img-url = https://raw.githubusercontent.co
 新加坡 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
+[Rule]
+GEOIP,CN,DIRECT
+FINAL,FINAL
+
 [Remote Rule]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=DIRECT, tag=局域网, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Advertising.lsr, policy=REJECT, tag=去广告,enabled=false
@@ -104,10 +108,6 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loo
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Direct.lsr, policy=DIRECT, tag=全球直连, enabled=true
-
-[Rule]
-GEOIP,CN,DIRECT
-FINAL,FINAL
 
 [Host]
 

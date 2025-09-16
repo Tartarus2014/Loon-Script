@@ -70,9 +70,9 @@ resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/rele
 
 [Remote Filter]
 
-[Remote Rule]
-
 [Rule]
+
+[Remote Rule]
 
 [Host]
 
