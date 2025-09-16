@@ -104,11 +104,9 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loo
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Direct.lsr, policy=DIRECT, tag=全球直连, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/GEOIP.list, policy=DIRECT, tag=GEOIP, enabled=true
 
 [Rule]
-# 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
-# 请勿修改远程CN REGION规则的排序甚至删除
+GEOIP,CN,DIRECT
 FINAL,FINAL
 
 [Host]
