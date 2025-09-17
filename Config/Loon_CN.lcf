@@ -115,7 +115,7 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Rul
 [Script]
 
 [Plugin]
-https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, enabled = true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/LoonGallery.lpx, enabled = true
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, enabled=false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled=false
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled=false
