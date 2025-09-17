@@ -118,8 +118,8 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Rul
 https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, enabled = true
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, enabled=false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled=false
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.lpx, enabled=false
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.lpx, enabled=false
 
 [Mitm]
 hostname = 
