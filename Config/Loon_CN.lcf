@@ -38,7 +38,7 @@ real-ip = *.apple.com,*apple.com
 # 绕过路由
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 # DNS 服务器
-dns-server = 223.5.5.5,180.184.1.1
+dns-server = system,223.5.5.5,180.184.1.1
 # doh-server = https://223.5.5.5/dns-query,https://8.8.8.8/dns-query
 # Hijack DNS
 # 默认情况下，Loon 只返回发送到 Loon DNS 地址的 DNS 查询的假 IP 地址(198.18.0.2)。
@@ -86,8 +86,8 @@ FINAL = select, DIRECT, 节点选择, img-url = https://raw.githubusercontent.co
 台湾 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 日本 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 韩国 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-新加坡 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新加坡 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 [Rule]
 FINAL,FINAL
@@ -101,7 +101,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rul
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/YouTube.lsr, policy=油管视频, tag=油管视频, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/Netflix.lsr, policy=奈飞视频, tag=奈飞视频, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/Bahamut.lsr, policy=巴哈姆特, tag=巴哈姆特, enabled=trueue
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/Bilibili.lsr, policy=港台番剧, tag=国内媒体, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/CN.lsr, policy=港台番剧, tag=国内媒体, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Other/Telegram.lsr, policy=电报消息, tag=电报消息, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=节点选择, tag=全球规则, enabled=true
@@ -119,8 +119,6 @@ https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, enabled = true
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, enabled=false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled=true
 
 [Mitm]
