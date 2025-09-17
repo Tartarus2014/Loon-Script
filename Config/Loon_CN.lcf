@@ -66,14 +66,14 @@ resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/rele
 [Remote Proxy]
 
 [Proxy Group]
-FINAL = select, DIRECT, 节点选择, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+FINAL = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 节点选择 = select, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 苹果服务 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 奈飞视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 油管视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 巴哈姆特 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 电报消息 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-港台番剧 = select, DIRECT, 台湾节点, 香港节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
+港台番剧 = select, DIRECT, 台湾节点, 香港节点, 狮城节点, 美国节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
 香港节点 = select, 香港, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 台湾节点 = select, 台湾, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 狮城节点 = select, 新加坡, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
