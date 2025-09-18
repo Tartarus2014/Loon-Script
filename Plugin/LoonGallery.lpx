@@ -1,7 +1,7 @@
 #!name = 插件仓库
 #!desc = Loon的插件仓库，一键安装，方便快捷。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Loon.png
-#!openUrl = https://hub.kelee.one 和 https://sooyaaabo.github.io/Loon/Plugin/
+#!openUrl = https://hub.kelee.one   https://sooyaaabo.github.io/Loon/Plugin/
 #!tag = 插件管理
 #!loon_version = 3.2.4(787)
 #!date = 2025-05-13 15:17:08
