@@ -106,7 +106,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Other/Tel
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Direct.lsr, policy=DIRECT, tag=全球直连, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/GEOIP.list, policy=DIRECT, tag=GEOIP_CN, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr, policy=DIRECT, tag=GEOIP_CN, enabled=true
 
 [Host]
 
