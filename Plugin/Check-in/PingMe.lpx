@@ -17,10 +17,10 @@ arg6 = input,"30 8,20 * * *",tag=WT定时
 DOMAIN, api.pingmeapp.net, PROXY
 
 [Script]
-cron {arg5} script-path=https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/PingMe.js, timeout=600,enable= {arg1},tag=PingMe签到任务
-cron {arg6} script-path=https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/WeTalk.js, timeout=600,enable= {arg2},tag=WeTalk签到任务
-http-request ^https:\/\/api\.pingmeapp\.net\/app\/queryBalanceAndBonus script-path=https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/PingMe.js, timeout=300, enable = {arg3}, tag=PingMe（token）
-http-request ^https:\/\/api\.wetalkapp\.com\/app\/queryBalanceAndBonus script-path=https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/WeTalk.js, timeout=300, enable = {arg4}, tag=WeTalk（token）
+cron ${arg5} then script("https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/PingMe.js") with enable=${arg1}, tag="PingMe签到任务", timeout=600
+cron ${arg6} then script("https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/WeTalk.js") with enable=${arg2}, tag="WeTalk签到任务", timeout=600
+request if ${url} ~= /^https:\/\/api\.pingmeapp\.net\/app\/queryBalanceAndBonus/i then script("https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/PingMe.js") with enable=${arg3}, tag="PingMe（token）", timeout=300
+request if ${url} ~= /^https:\/\/api\.wetalkapp\.com\/app\/queryBalanceAndBonus/i then script("https://luckyday.kdns.fr/refs/heads/main/Script%20/Tasks/WeTalk.js") with enable=${arg4}, tag="WeTalk（token）", timeout=300
 
 [MITM]
 hostname = api.pingmeapp.net, api.wetalkapp.com
