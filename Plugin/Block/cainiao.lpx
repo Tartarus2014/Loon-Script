@@ -1,0 +1,44 @@
+#!name = 菜鸟广告拦截
+#!author = ddgksf2013
+#!system = iOS,iPadOS
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/refs/heads/main/App_icon/1024px/Cainiao.png
+
+
+[Rewrite]
+# > 菜鸟裹裹_通用广告请求@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(?!.*_home)/i then reject(200)
+# > 菜鸟裹裹_通用广告请求@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow\.cn/i then reject(200)
+# > 菜鸟裹裹_首页底部商品推广@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbcps\.presentation\.fetch\.cn/i then reject(200)
+# > 菜鸟裹裹_底部角标推广@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.v\d+\.bottom\.area/i then reject(200)
+# > 菜鸟裹裹_支付宝小程序_通用广告请求@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\./i then reject(200)
+# > 菜鸟裹裹_支付宝小程序_底部商品推广新@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.alimama\.abyss\.unionpage\.get/i then reject(200)
+# > 菜鸟裹裹_支付宝小程序_底部商品推广旧@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad/i then reject(200)
+# > 菜鸟裹裹_支付宝小程序_匿名选择@ddgksf2013
+request if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge/i then reject(200)
+
+[Script]
+# > 菜鸟裹裹_amdc处理@ddgksf2013
+response if ${url} ~= /^http:\/\/amdc\.m\.taobao\.com/i then script("https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amdc.js") with tag="amdc", timeout=60, requires_body=true
+
+# > 菜鸟裹裹_我的页面去除推广[卸载重装]@ddgksf2013
+response if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.e2e\.engine\.page\.fetch/i then script("https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js") with tag="cainiao_json", timeout=60, requires_body=true
+
+# > 菜鸟裹裹_首页中部的问邻居推广@ddgksf2013
+response if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn/i then script("https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js") with tag="cainiao_json", timeout=60, requires_body=true
+
+# > 菜鸟裹裹_首页中部的惊喜福利推广@ddgksf2013
+response if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn/i then script("https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js") with tag="cainiao_json", timeout=60, requires_body=true
+
+# > 菜鸟裹裹_搜索框下方今日好物推荐@ddgksf2013
+response if ${url} ~= /^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword/i then script("https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js") with tag="cainiao_json", timeout=60, requires_body=true
+
+[MITM]
+hostname = *.cainiao.com, guide-acs.m.taobao.com, acs4miniapp-inner.m.taobao.com
