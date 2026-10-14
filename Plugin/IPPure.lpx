@@ -1,16 +1,14 @@
 #!name=IP 纯净度检测
 #!desc=多源节点 IP 纯净度检测（IPPure + IPLogs + ip-api），请先在参数内选择策略组。
 #!category=网络检测
-#!arguments=Proxy:DIRECT,MarkIP:false
-#!arguments-desc=Proxy: 选择策略组,默认DIRECT | MarkIP: IP 打码(true/false),默认 false
 
 [Rule]
 # 确保检测请求走选定的代理策略
-DOMAIN-SUFFIX,ippure.com,{{Proxy}}
-DOMAIN-SUFFIX,iplogs.com,{{Proxy}}
-DOMAIN-SUFFIX,ip-api.com,{{Proxy}}
-DOMAIN-SUFFIX,cleanip.io,{{Proxy}}
-DOMAIN-SUFFIX,ip.cx,{{Proxy}}
+DOMAIN-SUFFIX,ippure.com,PROXY
+DOMAIN-SUFFIX,iplogs.com,PROXY
+DOMAIN-SUFFIX,ip-api.com,PROXY
+DOMAIN-SUFFIX,cleanip.io,PROXY
+DOMAIN-SUFFIX,ip.cx,PROXY
 
 [Script]
-generic script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/IPPure.js, timeout=15, argument={{MarkIP}}, tag=IPPure, img-url=globe.asia.australia.system
+generic script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/IPPure.js, timeout=15, tag=IPPure, img-url=globe.asia.australia.system
