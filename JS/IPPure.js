@@ -3,9 +3,6 @@
  * Loon Generic
  */
 
-const url = "https://my.ippure.com/v1/info";
-const MarkIP = String($argument || "false").toLowerCase() === "true";
-
 $httpClient.get(url, function (err, resp, data) {
   if (err) {
     $done({
