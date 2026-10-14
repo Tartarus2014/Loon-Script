@@ -13,8 +13,4 @@ DOMAIN-SUFFIX,cleanip.io,{{Proxy}}
 DOMAIN-SUFFIX,ip.cx,{{Proxy}}
 
 [Script]
-IP-Pure = type=generic, timeout=10, argument={{MarkIP}}, script-path=https://raw.githubusercontent.com/Likhixang/Egerny/main/js/IPPure.js
-
-
-[Script]
 generic script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/IPPure.js, timeout=15, argument={{MarkIP}}, tag=IPPure, img-url=globe.asia.australia.system
