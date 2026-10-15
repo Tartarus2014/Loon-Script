@@ -1,0 +1,20 @@
+#!name=京东去广告 v2 (适配 15.9.50+)
+#!desc=适配京东 App 15.9.50+ 新协议(响应体 base64 化)的京东去广告插件。移除开屏广告、首页/我的/订单/物流页推广楼层、弹窗等。兼容新旧协议。适用京东 App >= 15.9.50（2026-08-12 验证）
+#!author=zbsdsb (基于 RuCu6/Maasea/kelee 原插件适配)
+#!openUrl=https://apps.apple.com/app/id414245413
+#!tag=去广告
+#!system=ios
+#!system_version=15.0+
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/zbsdsb/loon-adblock-plugins
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
+#!date=2026-08-12
+
+[Rule]
+URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
+
+[Script]
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action script-path=https://raw.githubusercontent.com/zbsdsb/loon-adblock-plugins/main/JD_remove_ads_v2.js, requires-body=true, tag=京东去广告v2
+
+[MitM]
+hostname=api.m.jd.com
