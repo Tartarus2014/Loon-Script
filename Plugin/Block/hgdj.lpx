@@ -2,6 +2,7 @@
 #!desc = 拦截红果短剧及字节系相关广告请求，同时直连内容服务器避免加载异常
 #!system = iOS,iPadOS
 #!loon_version = 3.5.0(975)
+#!tag = 去广告
 #!icon = 
 
 

@@ -3,6 +3,7 @@
 #!system = iOS,iPadOS
 #!system_version = 
 #!loon_version = 3.3.2(877)
+#!tag = 去广告
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/refs/heads/main/App_icon/1024px/Cainiao.png
 
 

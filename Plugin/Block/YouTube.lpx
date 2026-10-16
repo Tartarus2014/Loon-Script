@@ -1,9 +1,10 @@
-#!name=YouTube
-#!desc=移除广告, 移除上传&短片按钮, 解锁播放速度&精彩跳转。
-#!author=Maasea[https://github.com/Maasea/sgmodule], gholts[https://github.com/gholts/surge], RuCu6[https://github.com/RuCu6]
-#!icon=https://rucu6.pages.dev/Icons/app/youtube.png
-#!date=2026-10-11 15:20
-#!loon_version=3.5.1(978)
+#!name = YouTube
+#!desc = 移除广告, 移除上传&短片按钮, 解锁播放速度&精彩跳转。
+#!author = Maasea[https://github.com/Maasea/sgmodule], gholts[https://github.com/gholts/surge], RuCu6[https://github.com/RuCu6]
+#!icon = https://rucu6.pages.dev/Icons/app/youtube.png
+#!date = 2026-10-11 15:20
+#!tag = 去广告
+#!loon_version = 3.5.1(978)
 
 [Argument]
 autoHd=switch, false, true, tag=自动最高画质, desc=自动选择 YouTube 最高画质
