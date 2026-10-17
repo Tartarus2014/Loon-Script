@@ -8,6 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/zbsdsb/loon-adblock-plugins
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 #!tag = 去广告
 #!date = 2026-08-12
 
@@ -15,7 +16,7 @@
 URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 [Script]
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action script-path=https://raw.githubusercontent.com/zbsdsb/loon-adblock-plugins/main/JD_remove_ads_v2.js, requires-body=true, tag=京东去广告v2
+response if ${url} ~= /^https:\/\/api\.m\.jd\.com\/client\.action/i then script("https://raw.githubusercontent.com/zbsdsb/loon-adblock-plugins/main/JD_remove_ads_v2.js") with tag="京东去广告v2", requires_body=true
 
 [MitM]
-hostname=api.m.jd.com
+hostname = api.m.jd.com

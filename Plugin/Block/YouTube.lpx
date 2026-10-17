@@ -2,9 +2,11 @@
 #!desc = 拦截广告。支持后台播放、画中画（PiP）及最高 4 倍速播放。
 #!author = Maasea[https://github.com/Maasea/sgmodule], gholts[https://github.com/gholts/surge], RuCu6[https://github.com/RuCu6]
 #!icon = https://rucu6.pages.dev/Icons/app/youtube.png
+#!openUrl = https://apps.apple.com/app/id544007664
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 #!date = 2026-10-17 20:00
 #!tag = 去广告
-#!loon_version = 3.5.1(978)
+#!loon_version = 3.5.1(998)
 
 [Argument]
 autoHd = switch, false, true, tag=自动最高画质, desc=自动选择 YouTube 最高画质

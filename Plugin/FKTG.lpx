@@ -3,6 +3,7 @@
 #!author = mieqq
 #!system = iOS,iPadOS,tvOS,macOS
 #!loon_version = 3.3.4(895)
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 
 [Host]

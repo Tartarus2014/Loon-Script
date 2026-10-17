@@ -6,6 +6,7 @@
 #!loon_version = 3.3.2(877)
 #!tag = 去广告
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 
 [Rewrite]
 request if ${url} ~= /(?i)\b\/ad\//i then reject(404)

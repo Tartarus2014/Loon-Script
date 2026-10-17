@@ -4,6 +4,7 @@
 #!system = iOS,iPadOS,tvOS,macOS
 #!loon_version = 3.5.1(984)
 #!homepage = https://nsloon.app/docs/intro
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
 
 [Script]

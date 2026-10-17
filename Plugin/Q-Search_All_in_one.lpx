@@ -3,10 +3,12 @@
 #!author= 秦城二院彭医生(收集)
 #!homepage= https://github.com/dcpengx/Loon/tree/main/plugin/Q-search
 #!icon= https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Safari.png
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 #!system = iOS,iPadOS
 #!system_version = 15
 #!tag = 功能增强
 #!date= 2026-8-14 
+
 ##################################################################################################
 # - Safari 内输入以下格式命令快速指定搜索引擎
 # - 【命令+空格+关键词】或者【关键词+空格+命令】

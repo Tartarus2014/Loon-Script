@@ -5,6 +5,7 @@
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+#!homepage = https://github.com/Tartarus2014/Loon-Script
 #!homepage = https://github.com/Tartarus2014/Loon-Script/blob/master/Plugin/skip-proxy.md
 
 [General]
@@ -12,7 +13,7 @@ skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abch
 real-ip = easy-login.10099.com.cn,*-update.xoyocdn.com,id6.me,open.e.189.cn
 
 [Rule]
-DOMAIN,msmp.abchina.com.cn,REJECT
+DOMAIN, msmp.abchina.com.cn, REJECT
 
 [MitM]
 # 不可MitM也不应该被打断连接的域名
