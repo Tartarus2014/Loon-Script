@@ -45,14 +45,14 @@ resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/releas
 [Remote Proxy]
 
 [Proxy Group]
-漏网之鱼 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-节点选择 = select, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-苹果服务 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-奈飞视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-油管视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-巴哈姆特 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
-电报消息 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-港台番剧 = select, DIRECT, 台湾节点, 香港节点, 狮城节点, 美国节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
+漏网之鱼 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+节点选择 = select, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+人工智能 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/AIsouler/MyClash/main/Icons/svg/OpenAI.svg
+苹果服务 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+奈飞视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+油管视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+巴哈姆特 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
+电报消息 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 香港节点 = url-test, 香港, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 台湾节点 = url-test, 台湾, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 狮城节点 = url-test, 新加坡, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -83,7 +83,6 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Other/Git
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/YouTube.lsr, policy=油管视频, tag=油管视频, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/Netflix.lsr, policy=奈飞视频, tag=奈飞视频, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/Bahamut.lsr, policy=巴哈姆特, tag=巴哈姆特, enabled=trueue
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/CN.lsr, policy=港台番剧, tag=国内媒体, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Other/Telegram.lsr, policy=电报消息, tag=电报消息, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=节点选择, tag=全球规则, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=节点选择, tag=全球规则, enabled=true
