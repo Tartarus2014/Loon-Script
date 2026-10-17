@@ -1,33 +1,33 @@
-#!name = YouTube
-#!desc = 移除广告, 移除上传&短片按钮, 解锁播放速度&精彩跳转。
+#!name = YouTube Enhance
+#!desc = 拦截广告。支持后台播放、画中画（PiP）及最高 4 倍速播放。
 #!author = Maasea[https://github.com/Maasea/sgmodule], gholts[https://github.com/gholts/surge], RuCu6[https://github.com/RuCu6]
 #!icon = https://rucu6.pages.dev/Icons/app/youtube.png
-#!date = 2026-10-11 15:20
+#!date = 2026-10-17 20:00
 #!tag = 去广告
 #!loon_version = 3.5.1(978)
 
 [Argument]
-autoHd=switch, false, true, tag=自动最高画质, desc=自动选择 YouTube 最高画质
-blockAi=switch, false, true, tag=隐藏智能助手, desc=用于隐藏 YouTube 智能助手
-blockGames=switch, false, true, tag=隐藏内置游戏, desc=用于隐藏 YouTube 游戏服务
-blockShorts=switch, false, true, tag=隐藏短片按钮, desc=用于隐藏 YouTube 短片按钮
-blockStore=switch, false, true, tag=隐藏商品橱窗, desc=用于隐藏视频下方以及 YouTuber 主页中的商品推广
-blockUpload=switch, false, true, tag=隐藏上传按钮, desc=用于隐藏 YouTube 上传按钮
-blockVerticalLive=switch, false, true, tag=隐藏竖屏直播, desc=用于隐藏 YouTube 主页中的竖屏直播
-jumpAhead=switch, false, true, tag=开启精彩跳转, desc=解锁 YouTube Jump Ahead 按钮
+autoHd = switch, false, true, tag=自动最高画质, desc=自动选择 YouTube 最高画质
+blockAi = switch, false, true, tag=隐藏智能助手, desc=用于隐藏 YouTube 智能助手
+blockGames = switch, false, true, tag=隐藏内置游戏, desc=用于隐藏 YouTube 游戏服务
+blockShorts = switch, false, true, tag=隐藏短片按钮, desc=用于隐藏 YouTube 短片按钮
+blockStore = switch, false, true, tag=隐藏商品橱窗, desc=用于隐藏视频下方以及 YouTuber 主页中的商品推广
+blockUpload = switch, false, true, tag=隐藏上传按钮, desc=用于隐藏 YouTube 上传按钮
+blockVerticalLive = switch, false, true, tag=隐藏竖屏直播, desc=用于隐藏 YouTube 主页中的竖屏直播
+jumpAhead = switch, false, true, tag=开启精彩跳转, desc=解锁 YouTube Jump Ahead 按钮
 
 [Rewrite]
 request if ${url} ~= /^https:\/\/s\.youtube\.com\/api\/stats\/ads/i then reject(404)
 request if ${url} ~= /^https:\/\/www\.youtube\.com\/(pagead|pcs)\//i then reject(404)
 
 [Script]
-request if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\/ad_break(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/request_gholts.js") with tag="youtube_ad-break", requires_body=true, binary_body_mode=true
-request if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/request_gholts.js") with tag="youtube_init", requires_body=true, binary_body_mode=true
-request if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/videoplayback(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/request_gholts.js", {${autoHd}}) with enable=${autoHd}, tag="youtube_auto-hd", requires_body=true, binary_body_mode=true
-request if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/request_gholts.js") with tag="youtube_log-event", requires_body=true, binary_body_mode=true
-response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:navigation\/resolve_url|browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/response_gholts.js", {${autoHd}, ${blockAi}, ${blockGames}, ${blockShorts}, ${blockStore}, ${blockUpload}, ${blockVerticalLive}, ${jumpAhead}}) with tag="youtube_response", requires_body=true, binary_body_mode=true
-response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:config|log_event)(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/key_gholts.js") with tag="youtube_key", requires_body=true, binary_body_mode=true
-response if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback(?:\?.*)?$/i then script("https://rucu6.pages.dev/Scripts/youtube/ump_gholts.js", {${autoHd}, ${blockAi}, ${blockGames}, ${blockStore}, ${blockVerticalLive}, ${jumpAhead}}) with tag="youtube_ump", requires_body=true, binary_body_mode=true
+request if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\/ad_break(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/request.js") with tag="youtube.enhance.ad-break"
+request if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/request.js") with tag="youtube.enhance.init", requires_body=true, binary_body_mode=true
+request if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/videoplayback(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/request.js", {${autoHd}}) with tag="youtube.enhance.auto-hd", requires_body=true, binary_body_mode=true
+request if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/request.js") with tag="youtube.enhance.log-event"
+response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:navigation\/resolve_url|browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/response.js", {${blockUpload}, ${blockShorts}, ${blockGames}, ${blockVerticalLive}, ${jumpAhead}, ${autoHd}, ${blockStore}, ${blockAi}}) with tag="youtube.enhance.response", requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:config|log_event)(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/key.js") with tag="youtube.enhance.key", requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback(?:\?.*)?$/i then script("https://raw.githubusercontent.com/gholts/surge/main/scripts/youtube/ump.js", {${blockGames}, ${blockVerticalLive}, ${jumpAhead}, ${autoHd}, ${blockStore}, ${blockAi}}) with tag="youtube.enhance.ump", requires_body=true, binary_body_mode=true
 
 [MITM]
 hostname = rr*.googlevideo.com, s.youtube.com, www.youtube.com, youtubei.googleapis.com
