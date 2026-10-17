@@ -44,30 +44,30 @@ resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/releas
 
 [Remote Proxy]
 
+[Proxy Group]
+节点选择 = select, 全球节点, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+
 [Remote Filter]
 全球节点 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
-[Proxy Group]
-PROXY = select, 全球节点, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
-
 [Rule]
-FINAL,PROXY
+FINAL,节点选择
 
 [Remote Rule]
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,policy=DIRECT,tag=局域网,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Reject/Advertising.lsr,policy=REJECT,tag=去广告,enabled=false
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/TestFlight.lsr,policy=PROXY,tag=TestFlight,enabled=true
-https://kelee.one/Tool/Loon/Lsr/AI.lsr,policy=PROXY,tag=AI,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/Apple.lsr,policy=DIRECT,tag=苹果服务,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Other/Github.lsr,policy=PROXY,tag=Github,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/YouTube.lsr,policy=PROXY,tag=油管视频,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/Netflix.lsr,policy=PROXY,tag=奈飞视频,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Media/Bahamut.lsr,policy=PROXY,tag=巴哈姆特,enabled=trueue
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Other/Telegram.lsr,policy=PROXY,tag=电报消息,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list,policy=PROXY,tag=全球规则,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list,policy=PROXY,tag=全球规则,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Direct.lsr,policy=DIRECT,tag=全球直连,enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr,policy=DIRECT,tag=GEOIP_CN,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy = DIRECT, tag = 局域网, enabled = true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/TestFlight.lsr, policy = 节点选择, tag = TestFlight, enabled = true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy = 节点选择, tag = AI, enabled = true
+https://rule.kelee.one/Loon/Apple.lsr, policy = DIRECT, tag = 苹果服务, enabled = true
+https://rule.kelee.one/Loon/GitHub.lsr, policy = 节点选择, tag = Github, enabled = true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy = 节点选择, tag = TikTok, enabled = true
+https://rule.kelee.one/Loon/YouTube.lsr, policy = 节点选择, tag = 油管视频, enabled = true
+https://rule.kelee.one/Loon/Netflix.lsr, policy = 节点选择, tag = 奈飞视频, enabled = true
+https://rule.kelee.one/Loon/Bahamut.lsr, policy = 节点选择, tag = 巴哈姆特, enabled = trueue
+https://rule.kelee.one/Loon/Telegram.lsr, policy = 节点选择, tag = 电报消息, enabled = true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Direct.lsr, policy = DIRECT, tag = 全球直连, enabled = true
+https://rule.kelee.one/Loon/Proxy.lsr, policy = 节点选择, tag = 全球规则, enabled = true
+https://rule.kelee.one/Loon/ProxyLite.lsr, policy = 节点选择, tag = 全球规则, enabled = true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr, policy = DIRECT, tag = GEOIP_CN, enabled = true
 
 [Host]
 
@@ -78,6 +78,8 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr
 [Plugin]
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin = true, enabled = true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin = true, enabled = true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/loon/ipquality-web-test/ipquality-web-test.lpx, enabled = true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/LoonGallery.lpx, enabled = true
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Loon-parser.plugin, enabled = true
 https://raw.githubusercontent.com/mc2u/Loon/refs/heads/main/Plugins/loon_resource_parser.lpx, enabled = false
