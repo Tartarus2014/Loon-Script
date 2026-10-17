@@ -49,7 +49,7 @@ resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/releas
 [Proxy Group]
 漏网之鱼 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 节点选择 = select, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-人工智能 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/AIsouler/MyClash/main/Icons/svg/OpenAI.svg
+人工智能 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Color/AI.png
 苹果服务 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 海外抖音 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
 奈飞视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
