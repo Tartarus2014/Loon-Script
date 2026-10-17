@@ -16,57 +16,36 @@
 # 打开Loon的开关后并点击 https://www.nsloon.com/openloon/update?sub=all 一键更新所有外部资源。
 
 [General]
-# IPv6 支持
-ip-mode = dual
-ipv6-vif = auto
-# UDP相关
-disable-stun = true
-udp-fallback-mode = REJECT
-# SNI辅助规则匹配
-sni-sniffing = true
-# 策略组切换时关闭连接
-disconnect-on-policy-change = true
-# 域名拦截行为
-domain-reject-mode = DNS
-dns-reject-mode = LoopbackIP
-# > 跳过代理
-# 跳过某个域名或者 IP 段，这些目标主机将不会由 Loon Proxy 处理。
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
-# > Always Real IP Hosts
-# DNS 数据包将被转发到上游 DNS 服务器。
-real-ip = *.apple.com,*apple.com
-# 绕过路由
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
-# DNS 服务器
-dns-server = system,223.5.5.5,180.184.1.1
-# doh-server = https://223.5.5.5/dns-query,https://8.8.8.8/dns-query
-# Hijack DNS
-# 默认情况下，Loon 只返回发送到 Loon DNS 地址的 DNS 查询的假 IP 地址(198.18.0.2)。
-# 有些设备或软件总是使用硬编码的 DNS 服务器。 (例如 Google Speakers 总是使用 8.8.8.8)。 您可以使用此选项劫持查询，以获得一个假地址。
-hijack-dns = 8.8.8.8:53,8.8.4.4:53
-# Wi-Fi 访问
-allow-wifi-access = false
-wifi-access-http-port = 1234
-wifi-access-socks5-port = 1235
-mitm-on-wifi-access = false
-# 代理测速 URL
+ip-mode=dual
+ipv6-vif=auto
+disable-stun=true
+udp-fallback-mode=REJECT
+sni-sniffing=true
+disconnect-on-policy-change=true
+domain-reject-mode=DNS
+dns-reject-mode=LoopbackIP
+skip-proxy=192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+real-ip=*.apple.com,*apple.com
+bypass-tun=10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+dns-server=223.5.5.5,119.29.29.29
+doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query
+hijack-dns=8.8.8.8:53,8.8.4.4:53
+allow-wifi-access=false
+wifi-access-http-port=1234
+wifi-access-socks5-port=1235
+mitm-on-wifi-access=false
 internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
 proxy-test-url = http://detectportal.firefox.com/success.txt
-# 测速超时 (s)
-test-timeout = 5
-# 网络接口
-interface-mode = auto
-# ssid-trigger参数，用于指定SSID下流量模式切换，（default表示默认，cellular表示蜂窝，目前支持三种值：rule，direct，proxy） 
-# ssid-trigger = "default":rule, "cellular":rule,"ASUS_5G":direct
-# 解析器
-resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+test-timeout=5
+interface-mode=auto
+resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 [Proxy]
 
-[Remote Proxy]
+[RemoteProxy]
 
-[Proxy Group]
-FINAL = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+[ProxyGroup]
+漏网之鱼 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 节点选择 = select, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 苹果服务 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 奈飞视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, 韩国节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
@@ -86,15 +65,16 @@ FINAL = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 
 台湾 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 日本 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 韩国 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 新加坡 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
+美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+游戏 = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$"
+全球 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 [Rule]
-FINAL,FINAL
+FINAL,漏网之鱼
 
 [Remote Rule]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=DIRECT, tag=局域网, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Reject/Advertising.lsr, policy=REJECT, tag=去广告,enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Reject/Advertising.lsr, policy=REJECT, tag=去广告, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/TestFlight.lsr, policy=节点选择, tag=TestFlight, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=节点选择, tag=AI, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/Apple.lsr, policy=苹果服务, tag=苹果服务, enabled=true
@@ -116,14 +96,16 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr
 [Script]
 
 [Plugin]
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin = true, enabled = true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin = true, enabled = true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/LoonGallery.lpx, enabled = true
-https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Loon-parser.plugin, enabled=true
-https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled=false
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled=false
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/Advertising.lpx, enabled=false
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Loon-parser.plugin, enabled = true
+https://raw.githubusercontent.com/mc2u/Loon/refs/heads/main/Plugins/loon_resource_parser.lpx, enabled = false
+https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled = false
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled = false
 
 [Mitm]
 hostname = 
 ca-p12 = 
 ca-passphrase = 
-skip-server-cert-verify = true
+skip-server-cert-verify = false
