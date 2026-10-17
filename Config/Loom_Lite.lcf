@@ -76,12 +76,12 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr
 [Script]
 
 [Plugin]
-https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin = true, enabled = true
-https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin = true, enabled = true
-https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
-https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/loon/ipquality-web-test/ipquality-web-test.lpx, enabled = true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/LoonGallery.lpx, enabled = true
-https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Loon-parser.plugin, enabled = true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin = true, enabled = false
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin = true, enabled = false
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled = false
+https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/loon/ipquality-web-test/ipquality-web-test.lpx, enabled = false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/LoonGallery.lpx, enabled = false
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Loon-parser.plugin, enabled = false
 https://raw.githubusercontent.com/mc2u/Loon/refs/heads/main/Plugins/loon_resource_parser.lpx, enabled = false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled = false
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled = false
