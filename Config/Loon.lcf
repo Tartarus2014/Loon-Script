@@ -15,6 +15,8 @@
 # 添加你的机场订阅。
 # 打开Loon的开关后并点击 https://www.nsloon.com/openloon/update?sub=all 一键更新所有外部资源。
 
+# 配置更新时间 2026/10/17 18:00
+
 [General]
 ip-mode=dual
 ipv6-vif=auto
@@ -106,9 +108,12 @@ https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/conf
 https://raw.githubusercontent.com/mc2u/Loon/refs/heads/main/Plugins/loon_resource_parser.lpx, enabled = false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, enabled = false
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, enabled = false
+https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Plugins/Spotify.lpx, enabled = false
+https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Plugins/YouTube.lpx, enabled = false
 
 [Mitm]
-hostname = 
+# 提醒passphrase和p12代为证书&主机名部分, 更新配置前可把旧的配置中passphrase和p12代码拷贝下来, 导入新的配置文件把内容粘贴在对应位置就不用重装证书
 ca-p12 = 
 ca-passphrase = 
 skip-server-cert-verify = false
+hostname = 
