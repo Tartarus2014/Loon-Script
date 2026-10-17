@@ -3,7 +3,7 @@
 #!author = zbsdsb (基于 RuCu6/Maasea/kelee 原插件适配)
 #!openUrl= https://apps.apple.com/app/id414245413
 #!tag = 去广告
-#!system = ios
+#!system = iOS, iPadOS
 #!system_version = 15.0+
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/zbsdsb/loon-adblock-plugins

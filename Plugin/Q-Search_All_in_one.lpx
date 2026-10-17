@@ -4,7 +4,7 @@
 #!homepage= https://github.com/dcpengx/Loon/tree/main/plugin/Q-search
 #!icon= https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Safari.png
 #!homepage = https://github.com/Tartarus2014/Loon-Script
-#!system = iOS,iPadOS
+#!system = iOS, iPadOS, macOS
 #!system_version = 15
 #!tag = 功能增强
 #!date= 2026-8-14 

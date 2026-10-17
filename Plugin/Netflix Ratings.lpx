@@ -1,7 +1,7 @@
 #!name = Netflix Ratings
 #!desc = Netflix评分（IMDb、douban）
 #!author = yichahucha
-#!system = iOS,iPadOS
+#!system = iOS, iPadOS, macOS
 #!loon_version = 3.5.1(984)
 #!homepage = https://github.com/Tartarus2014/Loon-Script
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png

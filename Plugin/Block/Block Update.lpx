@@ -4,7 +4,6 @@
 #!homepage = https://github.com/Tartarus2014/Loon-Script
 #!author = ConnersHua
 #!system = iOS,iPadOS
-#!system_version = 
 #!loon_version = 3.3.2(877)
 
 [Rule]

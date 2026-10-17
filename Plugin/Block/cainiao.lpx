@@ -1,7 +1,6 @@
 #!name = 菜鸟广告拦截
 #!author = ddgksf2013
-#!system = iOS,iPadOS
-#!system_version = 
+#!system = iOS, iPadOS
 #!loon_version = 3.3.2(877)
 #!tag = 去广告
 #!homepage = https://github.com/Tartarus2014/Loon-Script

@@ -4,6 +4,7 @@
 #!icon = https://rucu6.pages.dev/Icons/app/youtube.png
 #!openUrl = https://apps.apple.com/app/id544007664
 #!homepage = https://github.com/Tartarus2014/Loon-Script
+#!system = iOS, iPadOS
 #!date = 2026-10-17 20:00
 #!tag = 去广告
 #!loon_version = 3.5.1(998)

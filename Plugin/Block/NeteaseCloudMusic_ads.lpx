@@ -1,7 +1,7 @@
 #!name = 网易云去广告 v2
 #!desc = 拦截网易云 9.5.x 开屏广告，并清洗首页推荐 Banner、二楼入口、运营商免流弹窗、会员投放卡。适用网易云音乐 9.5.67（2026-08-14 验证）。此文件名保持不变，旧导入链接刷新即可升级。
 #!author = zbsdsb
-#!system = ios
+#!system = iOS, iPadOS
 #!loon_version = 3.2.4
 #!homepage = https://github.com/zbsdsb/loon-adblock-plugins
 #!homepage = https://github.com/Tartarus2014/Loon-Script
