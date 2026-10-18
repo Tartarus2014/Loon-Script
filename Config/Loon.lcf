@@ -15,53 +15,54 @@
 # 添加你的机场订阅。
 # 打开Loon的开关后并点击 https://www.nsloon.com/openloon/update?sub=all 一键更新所有外部资源。
 
-# 配置更新时间 2026/10/17 18:00
+# 配置更新时间 2026/10/18 16:48
 
 [General]
-ip-mode=dual
-ipv6-vif=auto
-disable-stun=true
-udp-fallback-mode=REJECT
-sni-sniffing=true
-disconnect-on-policy-change=true
-domain-reject-mode=DNS
-dns-reject-mode=LoopbackIP
-skip-proxy=192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
-real-ip=*.apple.com,*apple.com
-bypass-tun=10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
-dns-server=223.5.5.5,119.29.29.29
-doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query
-hijack-dns=8.8.8.8:53,8.8.4.4:53
-allow-wifi-access=false
-wifi-access-http-port=1234
-wifi-access-socks5-port=1235
-mitm-on-wifi-access=false
+ip-mode = dual
+ipv6-vif = auto
+disable-stun = true
+udp-fallback-mode = REJECT
+sni-sniffing = true
+disconnect-on-policy-change = true
+domain-reject-mode = DNS
+dns-reject-mode = LoopbackIP
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
+real-ip = *.apple.com, *apple.com
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+dns-server = 223.5.5.5, 119.29.29.29
+doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
+allow-wifi-access = false
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+mitm-on-wifi-access = false
 internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
 proxy-test-url = http://detectportal.firefox.com/success.txt
-test-timeout=5
-interface-mode=auto
-resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+test-timeout = 5
+interface-mode = auto
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 [Proxy]
 
 [Remote Proxy]
 
 [Proxy Group]
-漏网之鱼 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-节点选择 = select, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-人工智能 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Color/AI.png
-苹果服务 = select, DIRECT, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-海外抖音 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
-奈飞视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-油管视频 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-巴哈姆特 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
-电报消息 = select, 节点选择, 香港节点, 狮城节点, 美国节点, 台湾节点, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-香港节点 = url-test, 香港, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-台湾节点 = url-test, 台湾, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-狮城节点 = url-test, 新加坡, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-韩国节点 = url-test, 韩国, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-日本节点 = url-test, 日本, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-美国节点 = url-test, 美国, url = http://www.qualcomm.cn/generate_204, interval = 60, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+FINAL = select, DIRECT, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+PROXY = select, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+AI = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Color/AI.png
+Apple = select, DIRECT, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+Telegram = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+GitHub = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GitHub.png
+TikTok = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+Netflix = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+YouTube = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+Bahamut = select, PROXY, HK, SG, US, JP, TW, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
+HK = url-test, 香港, url = http://www.qualcomm.cn/generate_204, interval = 300, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+TW = url-test, 台湾, url = http://www.qualcomm.cn/generate_204, interval = 300, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+SG = url-test, 新加坡, url = http://www.qualcomm.cn/generate_204, interval = 300, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+US = url-test, 美国, url = http://www.qualcomm.cn/generate_204, interval = 300, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+JP = url-test, 日本, url = http://www.qualcomm.cn/generate_204, interval = 300, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+KR = url-test, 韩国, url = http://www.qualcomm.cn/generate_204, interval = 300, tolerance = 50, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
 [Remote Filter]
 香港 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
@@ -74,22 +75,22 @@ resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/releas
 全球 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
 [Rule]
-FINAL,漏网之鱼
+FINAL,FINAL
 
 [Remote Rule]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy = DIRECT, tag = 局域网, enabled = true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/TestFlight.lsr, policy = 节点选择, tag = TestFlight, enabled = true
-https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy = 人工智能, tag = AI, enabled = true
-https://rule.kelee.one/Loon/Apple.lsr, policy = 苹果服务, tag = 苹果服务, enabled = true
-https://rule.kelee.one/Loon/GitHub.lsr, policy = 节点选择, tag = Github, enabled = true
-https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy = 海外抖音, tag = TikTok, enabled = true
-https://rule.kelee.one/Loon/YouTube.lsr, policy = 油管视频, tag = 油管视频, enabled = true
-https://rule.kelee.one/Loon/Netflix.lsr, policy = 奈飞视频, tag = 奈飞视频, enabled = true
-https://rule.kelee.one/Loon/Bahamut.lsr, policy = 巴哈姆特, tag = 巴哈姆特, enabled = trueue
-https://rule.kelee.one/Loon/Telegram.lsr, policy = 电报消息, tag = 电报消息, enabled = true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Direct.lsr, policy = DIRECT, tag = 全球直连, enabled = true
-https://rule.kelee.one/Loon/Proxy.lsr, policy = 节点选择, tag = 全球规则, enabled = true
-https://rule.kelee.one/Loon/ProxyLite.lsr, policy = 节点选择, tag = 全球规则, enabled = true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/TestFlight.lsr, policy = PROXY, tag = TestFlight, enabled = true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy = AI, tag = AI, enabled = true
+https://rule.kelee.one/Loon/Apple.lsr, policy = Apple, tag = Apple, enabled = true
+https://rule.kelee.one/Loon/GitHub.lsr, policy = GitHub, tag = Github, enabled = true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy = TikTok, tag = TikTok, enabled = true
+https://rule.kelee.one/Loon/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
+https://rule.kelee.one/Loon/Netflix.lsr, policy = Netflix, tag = Netflix, enabled = true
+https://rule.kelee.one/Loon/Bahamut.lsr, policy = Bahamut, tag = Bahamut, enabled = trueue
+https://rule.kelee.one/Loon/Telegram.lsr, policy = Telegram, tag = Telegram, enabled = true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Direct.lsr, policy = DIRECT, tag = DIRECT, enabled = true
+https://rule.kelee.one/Loon/Proxy.lsr, policy = PROXY, tag = 全球规则, enabled = true
+https://rule.kelee.one/Loon/ProxyLite.lsr, policy = PROXY, tag = 全球规则, enabled = true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr, policy = DIRECT, tag = GEOIP_CN, enabled = true
 
 [Host]
