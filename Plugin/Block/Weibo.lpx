@@ -1,0 +1,18 @@
+#!name = 微博净化[墨鱼版]
+#!desc = WeiboEnhanced 
+#!author = ddgksf2013
+#!openUrl= https://apps.apple.com/app/id350962117
+#!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Color/Weibo.png
+#!loon_version = 3.5.1(998)
+#!system = iOS, iPadOS
+#!date = 2026-10-18 17:02
+#!tag = 去广告
+
+[Script] 
+request if {url} ~= /^https:\/\/api\.weibo\.cn\/__qx_weibo_settings__\/(?:api\/config)?(?=[?#]|)/i then script("https://ddgksf2013.top/scripts/weibo_json.js") with tag="weibo_json", timeout=60
+request if {url} ~= /^https:\/\/api\.weibo\.cn\/__qx_weibo_settings__\/api\/(?:save|reset)(?=[?#]|)/i then script("https://ddgksf2013.top/scripts/weibo_json.js") with tag="weibo_json", timeout=60, requires_body=true
+response if ${url} ~= /^https?://api.weibo.cn(?:/2/statuses/container_timeline_hot|/2/guest/container_timeline_hot|/2/statuses/container_timeline_unread|/2/statuses/container_timeline|/2/live/media_homelist|/2/remind/hometab_dot|/2/remind/unread_count|/2/statuses/container_detail|/2/statuses/container_detail_comment|/2/comments/build_comments|/2/search/finder|/2/search/container_timeline|/2/search/container_discover|/2/!/was/finder/searchbarchange|/2/cardlist|/2/profile/me|/2/video/flow_stream|/2/video/flow_stream_cache|/2/push/daily|/2/push/active|/2/guest/push_active|/2/groups/allgroups/v2|/2/client/abserver_list|/2/checkin/show|/2/video/remind_info|/2/video/home_channels)(?=[?#]|$)/i then script("https://ddgksf2013.top/scripts/weibo_json.js") with tag="weibo_json", timeout=60, requires_body=true
+response if {url} ~= /^https?:\/\/bootpreload\.uve\.weibo\.com(?:\/v2\/ad\/preload)(?=[?#]|)/i then script("https://ddgksf2013.top/scripts/weibo_json.js") with tag="weibo_json", timeout=60, requires_body=true
+response if {url} ~= /^https?:\/\/wbapp\.uve\.weibo\.com(?:\/wbapplua\/wbpullad\.lua)(?=[?#]|)/i then script("https://ddgksf2013.top/scripts/weibo_json.js") with tag="weibo_json", timeout=60, requires_body=true
+
+[MITM] hostname = api.weibo.cn, bootpreload.uve.weibo.com, wbapp.uve.weibo.com

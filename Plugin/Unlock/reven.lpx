@@ -1,8 +1,8 @@
-#!name=Reven
-#!desc=支持一键解锁 RevenueCat、Superwall 和 Adapty (Adapty 需卸载重装 App 才生效)。如果遇到解锁后报错或闪退的 App (比如 Filebar)，可以直接在插件设置里填名字跳过它！(默认填 '-' 代表全部 App 正常解锁)
+#!name = Reven
+#!desc = 支持一键解锁 RevenueCat、Superwall 和 Adapty (Adapty 需卸载重装 App 才生效)。如果遇到解锁后报错或闪退的 App (比如 Filebar)，可以直接在插件设置里填名字跳过它！(默认填 '-' 代表全部 App 正常解锁)
 #!author = Baby
-#!tag=通杀脚本
-#!icon=https://raw.githubusercontent.com/fishdown/Icon/refs/heads/master/app/RevenueCat.png
+#!tag = 通杀脚本
+#!icon = https://raw.githubusercontent.com/fishdown/Icon/refs/heads/master/app/RevenueCat.png
 
 [Argument]
 Bypass = input, "-", tag=跳过指定App(绕过解锁), desc=遇到修改响应会报错的 App (如 Filebar) 可在此填入其 UA 关键词。多个用逗号隔开，填 - 表示全部解锁。

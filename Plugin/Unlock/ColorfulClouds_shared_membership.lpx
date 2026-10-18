@@ -1,11 +1,11 @@
-#!name=彩云天气Pro共享会员
-#!desc=在插件配置页面填写会员数据，首次使用时需启用此插件，最高仅支持7.20.2版。
-#!openUrl=https://apps.apple.com/cn/app/id1067198688
-#!author=佚名
+#!name = 彩云天气Pro共享会员
+#!desc = 在插件配置页面填写会员数据，首次使用时需启用此插件，最高仅支持7.20.2版。
+#!openUrl = https://apps.apple.com/cn/app/id1067198688
+#!author = 佚名
 #!loon_version = 3.5.1(984)
-#!homepage=https://gitlab.com/isous/loonresource/-/blob/main/README.md
-#!icon=https://gitlab.com/isous/loonresource/-/raw/main/Icon/ColorfulCloudsPro.png
-#!date=2024-09-28 22:05:37
+#!homepage = https://gitlab.com/isous/loonresource/-/blob/main/README.md
+#!icon = https://gitlab.com/isous/loonresource/-/raw/main/Icon/ColorfulCloudsPro.png
+#!date = 2024-09-28 22:05:37
 
 [Argument]
 cy_device_token=input,"",tag=令牌,desc=此处填写会员令牌

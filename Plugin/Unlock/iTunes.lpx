@@ -1,8 +1,8 @@
-#!name=iTunes系列解锁
-#!desc=自动查询 App 内购产品并注入最贵套餐凭证，可在设置中关闭。
+#!name = iTunes系列解锁
+#!desc = 自动查询 App 内购产品并注入最贵套餐凭证，可在设置中关闭。
 #!author = Baby
-#!tag=通杀脚本
-#!icon=https://raw.githubusercontent.com/fishdown/Icon/refs/heads/master/app/RevenueCat.png
+#!tag = 通杀脚本
+#!icon = https://raw.githubusercontent.com/fishdown/Icon/refs/heads/master/app/RevenueCat.png
 
 [Argument]
 Enabled = input, "true", tag=启用解锁, desc=是否启用解锁(true拦截并注入凭证/false直接放行)
