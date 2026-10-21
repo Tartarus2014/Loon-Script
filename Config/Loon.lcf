@@ -83,6 +83,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/Tes
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy = AI, tag = AI, enabled = true
 https://rule.kelee.one/Loon/Apple.lsr, policy = Apple, tag = Apple, enabled = true
 https://rule.kelee.one/Loon/GitHub.lsr, policy = GitHub, tag = Github, enabled = true
+https://rule.kelee.one/Loon/DouYin.lsr, policy = DIRECT, tag = DouYin, enabled = true
 https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy = TikTok, tag = TikTok, enabled = true
 https://rule.kelee.one/Loon/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
 https://rule.kelee.one/Loon/Netflix.lsr, policy = Netflix, tag = Netflix, enabled = true

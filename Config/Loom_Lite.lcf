@@ -61,6 +61,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/Apple/Tes
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy = 节点选择, tag = AI, enabled = true
 https://rule.kelee.one/Loon/Apple.lsr, policy = DIRECT, tag = 苹果服务, enabled = true
 https://rule.kelee.one/Loon/GitHub.lsr, policy = 节点选择, tag = Github, enabled = true
+https://rule.kelee.one/Loon/DouYin.lsr, policy = DIRECT, tag = 抖音, enabled = true
 https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy = 节点选择, tag = TikTok, enabled = true
 https://rule.kelee.one/Loon/YouTube.lsr, policy = 节点选择, tag = 油管视频, enabled = true
 https://rule.kelee.one/Loon/Netflix.lsr, policy = 节点选择, tag = 奈飞视频, enabled = true
