@@ -89,8 +89,9 @@ https://rule.kelee.one/Loon/Netflix.lsr, policy = Netflix, tag = Netflix, enable
 https://rule.kelee.one/Loon/Bahamut.lsr, policy = Bahamut, tag = Bahamut, enabled = trueue
 https://rule.kelee.one/Loon/Telegram.lsr, policy = Telegram, tag = Telegram, enabled = true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Direct.lsr, policy = DIRECT, tag = DIRECT, enabled = true
-https://rule.kelee.one/Loon/Proxy.lsr, policy = PROXY, tag = 全球规则, enabled = true
-https://rule.kelee.one/Loon/ProxyLite.lsr, policy = PROXY, tag = 全球规则, enabled = true
+https://rule.kelee.one/Loon/Proxy.lsr, policy = PROXY, tag = PROXY, enabled = true
+https://rule.kelee.one/Loon/ProxyLite.lsr, policy = PROXY, tag = PROXY, enabled = true
+https://rule.kelee.one/Loon/ChinaMax.lsr, policy = DIRECT, tag = DIRECT, enabled = true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr, policy = DIRECT, tag = GEOIP_CN, enabled = true
 
 [Host]

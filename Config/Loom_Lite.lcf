@@ -69,6 +69,7 @@ https://rule.kelee.one/Loon/Telegram.lsr, policy = 节点选择, tag = 电报消
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Direct.lsr, policy = DIRECT, tag = 全球直连, enabled = true
 https://rule.kelee.one/Loon/Proxy.lsr, policy = 节点选择, tag = 全球规则, enabled = true
 https://rule.kelee.one/Loon/ProxyLite.lsr, policy = 节点选择, tag = 全球规则, enabled = true
+https://rule.kelee.one/Loon/ChinaMax.lsr, policy = DIRECT, tag = 全球直连, enabled = true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Rule/GEOIP.lsr, policy = DIRECT, tag = GEOIP_CN, enabled = true
 
 [Host]
