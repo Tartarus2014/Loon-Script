@@ -18,4 +18,5 @@ request if ${url} ~= /^https?://..00po.shop/api/app/vid/m3u8/./i then script("ht
 request if ${url} ~= /^https?://..00po.shop/./i then script("https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/lysad.js") with tag="lysad", timeout=60
 response if ${url} ~= /^https?://..00po.shop/./i then script("https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/lysad.js") with tag="lysad", timeout=60, requires_body=true
 
-[MITM] hostname = oihawlma.00po.shop, *.00po.shop, *.oukky-lys.shop, *.cyou, *.eqfx9bas.cc, *.yihaici.top, *.yihaici.com, *.epuf3tk.cc, *.hxscwine.com, *.wdyzdc.com
+[MITM]
+hostname = oihawlma.00po.shop, *.00po.shop, *.oukky-lys.shop, *.cyou, *.eqfx9bas.cc, *.yihaici.top, *.yihaici.com, *.epuf3tk.cc, *.hxscwine.com, *.wdyzdc.com
