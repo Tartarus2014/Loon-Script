@@ -5,7 +5,7 @@
 #!loon_version = 3.3.2(877)
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1038.png
 
-[Rewrite] 
+[Rewrite]
 request if ${url} ~= /^https?://api-dc-prod-\d+.cyou//i then reject(200) 
 request if ${url} ~= /^https?://api-dc2-prod-\d+.cyou//i then reject(200) 
 request if ${url} ~= /^https?://..eqfx9bas.cc//i then reject(200) 
@@ -13,7 +13,7 @@ request if ${url} ~= /^https?://..yihaici.(?:top|com)//i then reject(200)
 request if ${url} ~= /^https?://.*.epuf3tk.cc//i then reject(200) 
 request if ${url} ~= /^https?://[^/]+/upload_01/ads//i then reject(200)
 
-[Script] 
+[Script]
 request if ${url} ~= /^https?://..00po.shop/api/app/vid/m3u8/./i then script("https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/lys.js") with tag="lys", timeout=60
 request if ${url} ~= /^https?://..00po.shop/./i then script("https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/lysad.js") with tag="lysad", timeout=60
 response if ${url} ~= /^https?://..00po.shop/./i then script("https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/lysad.js") with tag="lysad", timeout=60, requires_body=true
