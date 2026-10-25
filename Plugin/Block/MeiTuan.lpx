@@ -62,21 +62,21 @@ IP-CIDR6, 2402:4e00:40:40::2:373/128, REJECT, no-resolve
 
 [Script]
 # 首页标签：去掉 video、xiaotuan
-http-response ^https?:\/\/apimobile\.meituan\.com\/aggroup\/indexTab script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团首页标签
+http-response ^https?:\/\/apimobile\.meituan\.com\/aggroup\/indexTab script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团首页标签
 # 信息流：清空 gwc_feed1_2265、personalcenter_2154 两个场景
-http-response ^https?:\/\/feedguess\.meituan\.com\/lycoris\/scene\/(gwc_feed1_2265|personalcenter_2154)(\?|$) script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团信息流
+http-response ^https?:\/\/feedguess\.meituan\.com\/lycoris\/scene\/(gwc_feed1_2265|personalcenter_2154)(\?|$) script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团信息流
 # 我的页：去掉 mine_cross_recommend
-http-response ^https?:\/\/mt-personalcenter\.meituan\.com\/usercenter\/display script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团我的页面
+http-response ^https?:\/\/mt-personalcenter\.meituan\.com\/usercenter\/display script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团我的页面
 # 搜索默认词与热词
-http-response ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/defaultword script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团搜索热词
+http-response ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/defaultword script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团搜索热词
 # 热搜推荐与 AI 气泡
-http-response ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/hotword\/city\/divide\/hotrecommend\/ script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body = true,tag=美团热搜推荐
+http-response ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/hotword\/city\/divide\/hotrecommend\/ script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body = true,tag=美团热搜推荐
 # AI 助手角标配置
-http-response ^https?:\/\/assistify\.meituan\.com\/assistant\/getAppClientHornConfig script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团AI角标
+http-response ^https?:\/\/assistify\.meituan\.com\/assistant\/getAppClientHornConfig script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团AI角标
 # 购物车入口顶部横幅
-http-response ^https?:\/\/mop\.meituan\.com\/mop\/entry\/shoppingCartEntry script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团购物车横幅
+http-response ^https?:\/\/mop\.meituan\.com\/mop\/entry\/shoppingCartEntry script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团购物车横幅
 # 开屏图
-http-response ^https?:\/\/mop\.meituan\.com\/api\/entryModule\/startupPicture script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团开屏广告
+http-response ^https?:\/\/mop\.meituan\.com\/api\/entryModule\/startupPicture script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/MT.js ,requires-body=true,tag=美团开屏广告
 
 [MITM]
 hostname=apimobile.meituan.com,feedguess.meituan.com,mop.meituan.com,mt-personalcenter.meituan.com,assistify.meituan.com,httpdns.meituan.com,httpdnsmultiapi.meituan.com,httpdnsvip.meituan.com, httpdnsmultiapivip.meituan.com
