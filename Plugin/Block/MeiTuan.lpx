@@ -1,0 +1,82 @@
+#!name=美团去广告
+#!desc=去除美团 App 开屏，移除搜索热词、发现热词、美团热搜、底部视频、小团AI tab 按钮、移除购物车顶部横幅和底部推流，移除我的页面底部推荐。如遇无网络禁用插件即可。
+#!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi]
+#!tag=去广告
+#!icon=https://resource.wuyra.com/Icon/App_icon/120px/MeiTuan.png
+#!date=2026-10-25 21:14:00
+
+[Rule]
+DOMAIN, shark-mt.meituan.com, REJECT
+DOMAIN, shark-default.meituan.com, REJECT
+DOMAIN, shark-dp.meituan.com, REJECT
+DOMAIN, shark-ps.meituan.com, REJECT
+DOMAIN, shark-wm.sankuai.com, REJECT
+DOMAIN, shark.dianping.com, REJECT
+DOMAIN, httpdnsmultiapi.meituan.com, REJECT
+DOMAIN, httpdnsmultiapivip.meituan.com, REJECT
+DOMAIN, httpdns.meituan.com, REJECT
+DOMAIN, httpdnsvip.meituan.com, REJECT
+DOMAIN, dnspod.meituan.httpdns.qcloud.com, REJECT
+DOMAIN, dnspod.meituan.httpdns.start.qcloud.com, REJECT
+
+DOMAIN-WILDCARD, mquic-*.meituan.com, REJECT
+
+IP-CIDR, 202.90.108.13/32, REJECT, no-resolve
+IP-CIDR, 202.90.110.46/32, REJECT, no-resolve
+IP-CIDR, 202.90.108.69/32, REJECT, no-resolve
+IP-CIDR, 202.90.110.45/32, REJECT, no-resolve
+IP-CIDR, 202.90.108.68/32, REJECT, no-resolve
+IP-CIDR, 202.90.110.48/32, REJECT, no-resolve
+IP-CIDR, 202.90.108.67/32, REJECT, no-resolve
+IP-CIDR, 202.90.110.36/32, REJECT, no-resolve
+IP-CIDR, 202.90.108.54/32, REJECT, no-resolve
+IP-CIDR, 202.90.108.55/32, REJECT, no-resolve
+IP-CIDR, 203.76.217.51/32, REJECT, no-resolve
+IP-CIDR, 203.76.217.53/32, REJECT, no-resolve
+IP-CIDR, 203.76.217.241/32, REJECT, no-resolve
+IP-CIDR, 203.76.217.243/32, REJECT, no-resolve
+IP-CIDR, 103.202.146.30/32, REJECT, no-resolve
+IP-CIDR, 103.202.146.49/32, REJECT, no-resolve
+IP-CIDR, 101.50.8.64/32, REJECT, no-resolve
+IP-CIDR, 103.63.160.64/32, REJECT, no-resolve
+IP-CIDR, 103.63.160.69/32, REJECT, no-resolve
+IP-CIDR, 103.37.155.77/32, REJECT, no-resolve
+IP-CIDR, 103.37.155.60/32, REJECT, no-resolve
+IP-CIDR, 111.230.0.200/32, REJECT, no-resolve
+IP-CIDR, 139.9.47.231/32, REJECT, no-resolve
+IP-CIDR, 121.37.4.167/32, REJECT, no-resolve
+IP-CIDR, 119.29.126.219/32, REJECT, no-resolve
+IP-CIDR, 106.55.217.56/32, REJECT, no-resolve
+IP-CIDR, 103.37.152.224/32, REJECT, no-resolve
+IP-CIDR, 119.29.48.215/32, REJECT, no-resolve
+IP-CIDR, 42.193.128.160/32, REJECT, no-resolve
+
+IP-CIDR6, 2405:1480:3000:303b::303b/128, REJECT, no-resolve
+IP-CIDR6, 2405:1480:1000:3::1e/128, REJECT, no-resolve
+IP-CIDR6, 2405:1480:1000:4::15/128, REJECT, no-resolve
+IP-CIDR6, 2402:4e00:40:40::2:373/128, REJECT, no-resolve
+
+[Rewrite]
+^https?:\/\/(httpdns|httpdnsvip|httpdnsmultiapi|httpdnsmultiapivip)\.meituan\.com\/ reject
+^http:\/\/103\.37\.155\.60\/fetch reject
+
+[Script]
+# 首页标签：去掉 video、xiaotuan
+http-response ^https?:\/\/apimobile\.meituan\.com\/aggroup\/indexTab script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团首页标签
+# 信息流：清空 gwc_feed1_2265、personalcenter_2154 两个场景
+http-response ^https?:\/\/feedguess\.meituan\.com\/lycoris\/scene\/(gwc_feed1_2265|personalcenter_2154)(\?|$) script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团信息流
+# 我的页：去掉 mine_cross_recommend
+http-response ^https?:\/\/mt-personalcenter\.meituan\.com\/usercenter\/display script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团我的页面
+# 搜索默认词与热词
+http-response ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/defaultword script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团搜索热词
+# 热搜推荐与 AI 气泡
+http-response ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/hotword\/city\/divide\/hotrecommend\/ script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body = true,tag=美团热搜推荐
+# AI 助手角标配置
+http-response ^https?:\/\/assistify\.meituan\.com\/assistant\/getAppClientHornConfig script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团AI角标
+# 购物车入口顶部横幅
+http-response ^https?:\/\/mop\.meituan\.com\/mop\/entry\/shoppingCartEntry script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团购物车横幅
+# 开屏图
+http-response ^https?:\/\/mop\.meituan\.com\/api\/entryModule\/startupPicture script-path=https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/JS/MeiTuan.js,requires-body=true,tag=美团开屏广告
+
+[MITM]
+hostname=apimobile.meituan.com,feedguess.meituan.com,mop.meituan.com,mt-personalcenter.meituan.com,assistify.meituan.com,httpdns.meituan.com,httpdnsmultiapi.meituan.com,httpdnsvip.meituan.com, httpdnsmultiapivip.meituan.com
