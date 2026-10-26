@@ -1,0 +1,16 @@
+#!name = B站 PCDN 拦截
+#!desc = 拦截已知 B站 PCDN 域名及带 pcdn 的 biliapi.net 域名。无需 MitM 或脚本。依赖播放器备用源；不保证全部回源传统 CDN，也不保证彻底禁止 P2P 上传。
+#!author = Codex
+#!date = 2026-10-26
+#!loon_version = 3.2.4(787)
+
+[Rule]
+# mcdn.bilivideo.net 的现有证据不足，暂不纳入。
+# 不整域拦截 bilivideo.com / bilivideo.cn / biliapi.net，避免阻断正常功能。
+
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT
+DOMAIN-SUFFIX,szbdyd.com,REJECT
+DOMAIN-SUFFIX,edge.mountaintoys.cn,REJECT
+DOMAIN-SUFFIX,pcdn.biliapi.net,REJECT
+AND,((DOMAIN-SUFFIX,biliapi.net),(DOMAIN-KEYWORD,pcdn)),REJECT
