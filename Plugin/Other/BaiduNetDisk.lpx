@@ -1,0 +1,70 @@
+#!name = 百度网盘
+#!desc = 过滤百度网盘广告，解锁部分SVIP功能。
+#!openUrl = https://apps.apple.com/app/id547166701
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], ddgksf2013[https://github.com/ddgksf2013], chxm1023[https://github.com/chxm1023]
+#!tag = 去广告, 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.5.2(1005)
+#!homepage = https://loonlab.103516.xyz/Plugin/
+#!icon = https://raw.githubusercontent.com/sooyaaabo/IconLibrary/main/App/BaiduNetDisk.png
+#!date = 2026-10-02 12:00
+
+
+[Rewrite]
+# 开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/api\/getconfig\?/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?/i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist\?/i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\?/i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv\?/i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/api\/plugin\/get\?/i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/recommend\/query\/list\?/i then reject_dict(200)
+
+response if ${url} ~= /^https:\/\/pan\.baidu\.com\/feed\/kingkongdistrict\?/i then response.json.jq(".data.data |= map(select(.type != \"novel\" and .type != \"shortplay\" and .type != \"print\" and .type != \"job_hunt\"))")
+ 
+# 启动弹窗
+request if ${url} ~= /^https?:\/\/.*baidu\.com\/rest\/.*\/membership\/proxy\/guide/i then reject(200)
+
+# 设置信息流
+request if ${url} ~= /^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list/i then reject(200)
+
+# 热搜list
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/feed\/hotlist/i then reject(200)
+
+# 活动推广
+request if ${url} ~= /^https?:\/\/.*zhangyuyidong\.cn\/api\/zysdk/i then reject(200)
+
+# 搜索填词
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/queryintent\/queryhint/i then reject(200)
+
+# 金币乐园
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/coins\/center\/notice/i then reject(200)
+
+# 短剧
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/recommend\/shortseries\/list/i then reject_dict(200)
+
+[Script]
+# 广告推广
+response if ${url} ~= /^https?:\/\/afd\.baidu\.com\/afd\/entry/i then script("https://ddgksf2013.top/scripts/bdpan.ads.js") with tag="[百度网盘]移除广告推广", requires_body=true
+
+# 首页信息流
+response if ${url} ~= /^https:\/\/pan\.baidu\.com\/feed\/cardinfos/i then script("https://ddgksf2013.top/scripts/bdpan.ads.js") with tag="[百度网盘]移除首页信息流广告", requires_body=true
+
+# 游戏广告
+response if ${url} ~= /^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter/i then script("https://ddgksf2013.top/scripts/bdpan.ads.js") with tag="[百度网盘]移除游戏广告", requires_body=true
+
+# chxm1023
+response if ${url} ~= /^https?:\/\/pan\.baidu\.com\/(act\/.+\/(activityentry|bchannel|cardwelfare|skin)|rest\/.+\/(membership\/user|pcs\/adv)|feed\/cardinfos|api\/(user\/getinfo|quota|loginstatus|account\/getprivilege)|buy\/ad\/conf|wap\/vip|coins\/taskcenter\/homensr)/i then script("https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js") with tag="[百度网盘]会员权益@chxm1023", requires_body=true
+
+# ddgksf2013
+request if ${url} ~= /^https:\/\/pan\.baidu\.com\/api\/streaming\?app_id=\d+&type=M3U8_HQ_1080/i then script("https://ddgksf2013.top/scripts/bdpan.unlock.js") with tag="[百度网盘]倍速播放@ddgksf2013", requires_body=false
+response if ${url} ~= /^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user/i then script("https://ddgksf2013.top/scripts/bdpan.unlock.js") with tag="[百度网盘]倍速播放@ddgksf2013", requires_body=true
+
+[Mitm]
+hostname = pan.baidu.com, afd.baidu.com
